@@ -13,8 +13,8 @@
 
 protocol Networking {
     
-    typealias NPResponseHandler<T> = (DataResponseModel<T>) -> Void
-    typealias NPResultHandler<T> = (ResultType<T>) -> Void
+    typealias DataResponseHandler<T> = (DataResponseModel<T>) -> Void
+    typealias ResultHandler<T> = (ResultType<T>) -> Void
 
     //func requestObject<T:Mappable>(_ router: APIRoutering,completionHandler: @escaping NPResponseHandler<T>)
     

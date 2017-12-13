@@ -16,6 +16,10 @@
 		BEAD8E191FE1075E00546C7A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E151FE1075E00546C7A /* Networking.swift */; };
 		BEAD8E1C1FE1085D00546C7A /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E1B1FE1085D00546C7A /* DataResponseModel.swift */; };
 		BEAD8E1E1FE108B100546C7A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E1D1FE108B100546C7A /* NetworkError.swift */; };
+		BEAD8E481FE116FB00546C7A /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E461FE116FB00546C7A /* DependencyRegistry.swift */; };
+		BEAD8E491FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E471FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift */; };
+		BEAD8E4D1FE12C8900546C7A /* AppRootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E4C1FE12C8900546C7A /* AppRootCoordinator.swift */; };
+		BEAD8E521FE1332800546C7A /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E511FE1332800546C7A /* MovieSearchViewController.swift */; };
 		BEE6A8291FE0FB7E00EA047C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6A8281FE0FB7E00EA047C /* AppDelegate.swift */; };
 		BEE6A8301FE0FB7E00EA047C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE6A82F1FE0FB7E00EA047C /* Assets.xcassets */; };
 		BEE6A83E1FE0FB7E00EA047C /* CareemAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6A83D1FE0FB7E00EA047C /* CareemAssignmentTests.swift */; };
@@ -44,6 +48,10 @@
 		BEAD8E151FE1075E00546C7A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BEAD8E1B1FE1085D00546C7A /* DataResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
 		BEAD8E1D1FE108B100546C7A /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BEAD8E461FE116FB00546C7A /* DependencyRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
+		BEAD8E471FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		BEAD8E4C1FE12C8900546C7A /* AppRootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootCoordinator.swift; sourceTree = "<group>"; };
+		BEAD8E511FE1332800546C7A /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
 		BEE6A8251FE0FB7E00EA047C /* CareemAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareemAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE6A8281FE0FB7E00EA047C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE6A82F1FE0FB7E00EA047C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 		BEAD8E011FE1041A00546C7A /* AppRoot */ = {
 			isa = PBXGroup;
 			children = (
+				BEAD8E451FE116CF00546C7A /* Dependencies */,
 				BEE6A8281FE0FB7E00EA047C /* AppDelegate.swift */,
 				BEE6A8341FE0FB7E00EA047C /* Info.plist */,
 			);
@@ -127,6 +136,7 @@
 		BEAD8E081FE105CD00546C7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BEAD8E4E1FE1329A00546C7A /* Movie */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -134,7 +144,9 @@
 		BEAD8E091FE105DE00546C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BEAD8E4B1FE12C3F00546C7A /* Coordinators */,
 				BEAD8E0D1FE1068B00546C7A /* Constants */,
+				BEAD8E4A1FE118F300546C7A /* Protocols */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -180,6 +192,46 @@
 				BEAD8E1B1FE1085D00546C7A /* DataResponseModel.swift */,
 			);
 			path = DataTransferObjects;
+			sourceTree = "<group>";
+		};
+		BEAD8E451FE116CF00546C7A /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BEAD8E461FE116FB00546C7A /* DependencyRegistry.swift */,
+				BEAD8E471FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		BEAD8E4A1FE118F300546C7A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BEAD8E4B1FE12C3F00546C7A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				BEAD8E4C1FE12C8900546C7A /* AppRootCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BEAD8E4E1FE1329A00546C7A /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				BEAD8E501FE1330C00546C7A /* MovieSearchModule */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		BEAD8E501FE1330C00546C7A /* MovieSearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				BEAD8E511FE1332800546C7A /* MovieSearchViewController.swift */,
+			);
+			path = MovieSearchModule;
 			sourceTree = "<group>";
 		};
 		BEE6A81C1FE0FB7E00EA047C = {
@@ -359,11 +411,15 @@
 				BEE6A8291FE0FB7E00EA047C /* AppDelegate.swift in Sources */,
 				BEAD8E1E1FE108B100546C7A /* NetworkError.swift in Sources */,
 				BEAD8E181FE1075E00546C7A /* APIRoutering.swift in Sources */,
+				BEAD8E491FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift in Sources */,
 				BEAD8E171FE1075E00546C7A /* AlamofireRouterRequest.swift in Sources */,
 				BEAD8E191FE1075E00546C7A /* Networking.swift in Sources */,
+				BEAD8E4D1FE12C8900546C7A /* AppRootCoordinator.swift in Sources */,
 				BEAD8E161FE1075E00546C7A /* AlamofireNetwork.swift in Sources */,
 				BEAD8E0F1FE106C300546C7A /* AppConstants.swift in Sources */,
 				BEAD8E1C1FE1085D00546C7A /* DataResponseModel.swift in Sources */,
+				BEAD8E481FE116FB00546C7A /* DependencyRegistry.swift in Sources */,
+				BEAD8E521FE1332800546C7A /* MovieSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
