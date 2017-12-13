@@ -13,6 +13,9 @@
 		BEE6A8301FE0FB7E00EA047C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE6A82F1FE0FB7E00EA047C /* Assets.xcassets */; };
 		BEE6A8331FE0FB7E00EA047C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE6A8311FE0FB7E00EA047C /* LaunchScreen.storyboard */; };
 		BEE6A83E1FE0FB7E00EA047C /* CareemAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE6A83D1FE0FB7E00EA047C /* CareemAssignmentTests.swift */; };
+		BEEDB16D1FE1017200DBD58E /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDB16A1FE1017200DBD58E /* SwinjectStoryboard.framework */; };
+		BEEDB16E1FE1017200DBD58E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDB16B1FE1017200DBD58E /* Swinject.framework */; };
+		BEEDB16F1FE1017200DBD58E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDB16C1FE1017200DBD58E /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		BEE6A8391FE0FB7E00EA047C /* CareemAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareemAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE6A83D1FE0FB7E00EA047C /* CareemAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareemAssignmentTests.swift; sourceTree = "<group>"; };
 		BEE6A83F1FE0FB7E00EA047C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEEDB16A1FE1017200DBD58E /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		BEEDB16B1FE1017200DBD58E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		BEEDB16C1FE1017200DBD58E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEDB16D1FE1017200DBD58E /* SwinjectStoryboard.framework in Frameworks */,
+				BEEDB16E1FE1017200DBD58E /* Swinject.framework in Frameworks */,
+				BEEDB16F1FE1017200DBD58E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 				BEE6A8271FE0FB7E00EA047C /* CareemAssignment */,
 				BEE6A83C1FE0FB7E00EA047C /* CareemAssignmentTests */,
 				BEE6A8261FE0FB7E00EA047C /* Products */,
+				BEEDB1691FE1017100DBD58E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +106,16 @@
 			path = CareemAssignmentTests;
 			sourceTree = "<group>";
 		};
+		BEEDB1691FE1017100DBD58E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEEDB16C1FE1017200DBD58E /* Alamofire.framework */,
+				BEEDB16B1FE1017200DBD58E /* Swinject.framework */,
+				BEEDB16A1FE1017200DBD58E /* SwinjectStoryboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +126,7 @@
 				BEE6A8211FE0FB7E00EA047C /* Sources */,
 				BEE6A8221FE0FB7E00EA047C /* Frameworks */,
 				BEE6A8231FE0FB7E00EA047C /* Resources */,
+				BEEDB1701FE1017B00DBD58E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,6 +214,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BEEDB1701FE1017B00DBD58E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectStoryboard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BEE6A8211FE0FB7E00EA047C /* Sources */ = {
@@ -355,6 +398,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CareemAssignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = venturedive.com.vd.CareemAssignment;
@@ -371,6 +418,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CareemAssignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = venturedive.com.vd.CareemAssignment;
