@@ -17,9 +17,9 @@ protocol RootCoordinator: class {
 
 class AppRootCoordinator: RootCoordinator {
     
-    var rootViewController: UIViewController
+    fileprivate var rootViewController: MovieSearchViewController
     
-    init(with rootViewController: UIViewController) {
+    init(with rootViewController: MovieSearchViewController) {
         
         self.rootViewController = rootViewController
         

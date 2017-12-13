@@ -16,3 +16,10 @@ struct APIURLs {
     }
     
 }
+
+
+struct DependencyNames {
+    
+    static let remoteMovieDataStore = String(describing:RemoteMovieDataStore.self)
+    
+}

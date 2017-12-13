@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2A10EF1FE148DD0097039D /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10EE1FE148DD0097039D /* MovieSearchViewModel.swift */; };
+		BE2A10F21FE14BAC0097039D /* MovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F11FE14BAC0097039D /* MovieDataStore.swift */; };
+		BE2A10F41FE14C4D0097039D /* RemoteMovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F31FE14C4D0097039D /* RemoteMovieDataStore.swift */; };
 		BEAD8E041FE1051A00546C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAD8E031FE1051A00546C7A /* LaunchScreen.storyboard */; };
 		BEAD8E0C1FE105FB00546C7A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAD8E0B1FE105FB00546C7A /* Movie.storyboard */; };
 		BEAD8E0F1FE106C300546C7A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E0E1FE106C300546C7A /* AppConstants.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2A10EE1FE148DD0097039D /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
+		BE2A10F11FE14BAC0097039D /* MovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataStore.swift; sourceTree = "<group>"; };
+		BE2A10F31FE14C4D0097039D /* RemoteMovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovieDataStore.swift; sourceTree = "<group>"; };
 		BEAD8E031FE1051A00546C7A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEAD8E0B1FE105FB00546C7A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		BEAD8E0E1FE106C300546C7A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -85,6 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE2A10ED1FE148640097039D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE2A10F01FE14B5A0097039D /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+				BE2A10F11FE14BAC0097039D /* MovieDataStore.swift */,
+				BE2A10F31FE14C4D0097039D /* RemoteMovieDataStore.swift */,
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
 		BEAD8E011FE1041A00546C7A /* AppRoot */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +148,9 @@
 		BEAD8E071FE1059800546C7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BEAD8E1D1FE108B100546C7A /* NetworkError.swift */,
+				BE2A10F01FE14B5A0097039D /* DataStores */,
 				BEAD8E1A1FE1082F00546C7A /* DataTransferObjects */,
+				BEAD8E1D1FE108B100546C7A /* NetworkError.swift */,
 				BEAD8E101FE1075E00546C7A /* Networks */,
 			);
 			path = Model;
@@ -144,8 +167,9 @@
 		BEAD8E091FE105DE00546C7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BEAD8E4B1FE12C3F00546C7A /* Coordinators */,
 				BEAD8E0D1FE1068B00546C7A /* Constants */,
+				BEAD8E4B1FE12C3F00546C7A /* Coordinators */,
+				BE2A10ED1FE148640097039D /* Extensions */,
 				BEAD8E4A1FE118F300546C7A /* Protocols */,
 			);
 			path = Common;
@@ -230,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				BEAD8E511FE1332800546C7A /* MovieSearchViewController.swift */,
+				BE2A10EE1FE148DD0097039D /* MovieSearchViewModel.swift */,
 			);
 			path = MovieSearchModule;
 			sourceTree = "<group>";
@@ -411,8 +436,11 @@
 				BEE6A8291FE0FB7E00EA047C /* AppDelegate.swift in Sources */,
 				BEAD8E1E1FE108B100546C7A /* NetworkError.swift in Sources */,
 				BEAD8E181FE1075E00546C7A /* APIRoutering.swift in Sources */,
+				BE2A10F41FE14C4D0097039D /* RemoteMovieDataStore.swift in Sources */,
+				BE2A10EF1FE148DD0097039D /* MovieSearchViewModel.swift in Sources */,
 				BEAD8E491FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift in Sources */,
 				BEAD8E171FE1075E00546C7A /* AlamofireRouterRequest.swift in Sources */,
+				BE2A10F21FE14BAC0097039D /* MovieDataStore.swift in Sources */,
 				BEAD8E191FE1075E00546C7A /* Networking.swift in Sources */,
 				BEAD8E4D1FE12C8900546C7A /* AppRootCoordinator.swift in Sources */,
 				BEAD8E161FE1075E00546C7A /* AlamofireNetwork.swift in Sources */,
