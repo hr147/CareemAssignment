@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" ~> 4.5
+github "Swinject/Swinject" ~> 2.0.0
+
+# Uncomment if you use SwinjectStoryboard
+github "Swinject/SwinjectStoryboard" ~> 1.0.0
