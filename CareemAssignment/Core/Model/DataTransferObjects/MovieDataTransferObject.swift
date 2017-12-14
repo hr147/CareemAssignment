@@ -6,10 +6,20 @@
 //  Copyright © 2017 Haroon Ur Rasheed. All rights reserved.
 //
 
+import Foundation
 
-
-struct MovieDataTransferObject {
+struct MovieDataTransferObject:Codable {
 
     let name:String
+    let poster:String
+    let releaseDate:String
+    let description:String
+    
+    private enum CodingKeys: String, CodingKey {
+        case name = "title"
+        case poster = "poster_path"
+        case releaseDate = "release_date"
+        case description = "overview"
+    }
     
 }

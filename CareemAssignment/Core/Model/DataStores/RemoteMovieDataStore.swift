@@ -12,7 +12,7 @@ enum MovieRouter :APIRoutering {
     
     
     
-    case search(MovieRequestModel)
+    case search([String:Any]?)
     
     var path: String {
         
@@ -29,11 +29,13 @@ enum MovieRouter :APIRoutering {
         switch self {
         case .search(let movieRequestModel):
             
-            if let encodedData = try? JSONEncoder().encode(movieRequestModel),
-            let jsonModel = try? JSONSerialization.jsonObject(with: encodedData, options:.allowFragments) as? [String: Any]{
-                
-                return jsonModel
-            }
+            
+            return movieRequestModel
+//            if let encodedData = try? JSONEncoder().encode(movieRequestModel),
+//            let jsonModel = try? JSONSerialization.jsonObject(with: encodedData, options:.allowFragments) as? [String: Any]{
+//
+//                return jsonModel
+//            }
             
             
             //return ["api_key":"2696829a81b1b5827d515ff121700838",
@@ -41,22 +43,32 @@ enum MovieRouter :APIRoutering {
                 //    "page":1]
         }
         
-        return nil
+        
     }
     
 }
 struct RemoteMovieDataStore: MovieDataStore {
     
      let network:Networking!
+     let translation:TranslationLayer!
     
-    func search(with request:MovieRequestModel , completion: @escaping ResultHandler<MovieDataTransferObject>){
+    func search(with request:MovieRequestModel , completion: @escaping ResultHandler<MovieResponseModel>){
         
-        let router:MovieRouter = .search(request)
-        
-        network.requestObject(router) { (response:DataResponseModel<MovieResponseModel>) in
+        do {
             
-            //completion(<#T##ResultType<MovieDataTransferObject>#>)
+            let router:MovieRouter = .search(try translation.json(withModel: request))
             
+            network.requestObject(router) { (response:DataResponseModel<MovieResponseModel>) in
+                
+                completion(response.result)
+                
+            }
+            
+        }catch{
+            
+            let error:NetworkError = .RequestFailed
+            let result:ResultType<MovieResponseModel> = .failure(error)
+            completion(result)
         }
         
     }

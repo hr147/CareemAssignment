@@ -13,6 +13,10 @@
 		BE2A10F61FE16A780097039D /* MovieDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */; };
 		BE2A10FA1FE177820097039D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F91FE177820097039D /* MovieResponseModel.swift */; };
 		BE2A10FC1FE177940097039D /* MovieRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10FB1FE177940097039D /* MovieRequestModel.swift */; };
+		BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CA41FE254D300700B4F /* JSONTranslation.swift */; };
+		BE796CA81FE25A7400700B4F /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CA71FE25A7400700B4F /* DataSourceError.swift */; };
+		BE796CAB1FE281CE00700B4F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CAA1FE281CE00700B4F /* MovieTableViewCell.swift */; };
+		BE796CAD1FE28EC100700B4F /* MovieTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CAC1FE28EC100700B4F /* MovieTableViewCellViewModel.swift */; };
 		BEAD8E041FE1051A00546C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAD8E031FE1051A00546C7A /* LaunchScreen.storyboard */; };
 		BEAD8E0C1FE105FB00546C7A /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAD8E0B1FE105FB00546C7A /* Movie.storyboard */; };
 		BEAD8E0F1FE106C300546C7A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD8E0E1FE106C300546C7A /* AppConstants.swift */; };
@@ -51,6 +55,10 @@
 		BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataTransferObject.swift; sourceTree = "<group>"; };
 		BE2A10F91FE177820097039D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
 		BE2A10FB1FE177940097039D /* MovieRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequestModel.swift; sourceTree = "<group>"; };
+		BE796CA41FE254D300700B4F /* JSONTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTranslation.swift; sourceTree = "<group>"; };
+		BE796CA71FE25A7400700B4F /* DataSourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceError.swift; sourceTree = "<group>"; };
+		BE796CAA1FE281CE00700B4F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		BE796CAC1FE28EC100700B4F /* MovieTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		BEAD8E031FE1051A00546C7A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEAD8E0B1FE105FB00546C7A /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		BEAD8E0E1FE106C300546C7A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -129,6 +137,31 @@
 			path = ResponseModels;
 			sourceTree = "<group>";
 		};
+		BE796CA31FE2549700700B4F /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				BE796CA41FE254D300700B4F /* JSONTranslation.swift */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
+		BE796CA61FE2598B00700B4F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BE796CA71FE25A7400700B4F /* DataSourceError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		BE796CA91FE281B800700B4F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BE796CAA1FE281CE00700B4F /* MovieTableViewCell.swift */,
+				BE796CAC1FE28EC100700B4F /* MovieTableViewCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BEAD8E011FE1041A00546C7A /* AppRoot */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +195,7 @@
 		BEAD8E061FE1058C00546C7A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE796CA91FE281B800700B4F /* Cells */,
 				BEAD8E0A1FE105F000546C7A /* Storyboards */,
 			);
 			path = UI;
@@ -170,6 +204,8 @@
 		BEAD8E071FE1059800546C7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE796CA61FE2598B00700B4F /* Errors */,
+				BE796CA31FE2549700700B4F /* Translation */,
 				BE2A10F01FE14B5A0097039D /* DataStores */,
 				BEAD8E1A1FE1082F00546C7A /* DataTransferObjects */,
 				BEAD8E1D1FE108B100546C7A /* NetworkError.swift */,
@@ -459,13 +495,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE6A8291FE0FB7E00EA047C /* AppDelegate.swift in Sources */,
+				BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */,
+				BE796CAB1FE281CE00700B4F /* MovieTableViewCell.swift in Sources */,
 				BEAD8E1E1FE108B100546C7A /* NetworkError.swift in Sources */,
 				BEAD8E181FE1075E00546C7A /* APIRoutering.swift in Sources */,
 				BE2A10F41FE14C4D0097039D /* RemoteMovieDataStore.swift in Sources */,
 				BE2A10FC1FE177940097039D /* MovieRequestModel.swift in Sources */,
+				BE796CAD1FE28EC100700B4F /* MovieTableViewCellViewModel.swift in Sources */,
 				BE2A10EF1FE148DD0097039D /* MovieSearchViewModel.swift in Sources */,
 				BEAD8E491FE116FB00546C7A /* SwinjectStoryboard+Extensions.swift in Sources */,
 				BEAD8E171FE1075E00546C7A /* AlamofireRouterRequest.swift in Sources */,
+				BE796CA81FE25A7400700B4F /* DataSourceError.swift in Sources */,
 				BE2A10F21FE14BAC0097039D /* MovieDataStore.swift in Sources */,
 				BEAD8E191FE1075E00546C7A /* Networking.swift in Sources */,
 				BEAD8E4D1FE12C8900546C7A /* AppRootCoordinator.swift in Sources */,
@@ -616,6 +656,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CareemAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = venturedive.com.vd.CareemAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -636,6 +677,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CareemAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = venturedive.com.vd.CareemAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";

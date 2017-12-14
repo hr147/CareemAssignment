@@ -31,6 +31,7 @@ class SwinjectDependency: DependencyRegistry {
         
 
         container.register(Networking.self) { _ in AlamofireNetwork()  }.inObjectScope(.container)
+        container.register(TranslationLayer.self) { _ in JSONTranslation()  }.inObjectScope(.container)
 //        container.register(DataLayer.self       ) { _ in DataLayerImpl()     }.inObjectScope(.container)
 //        container.register(SpyTranslator.self   ) { _ in SpyTranslatorImpl() }.inObjectScope(.container)
 //
@@ -52,7 +53,10 @@ class SwinjectDependency: DependencyRegistry {
         container.register(MovieDataStore.self,
                            name: DependencyNames.remoteMovieDataStore){ r  in
             
-            return RemoteMovieDataStore(network: r.resolve(Networking.self))
+                            return RemoteMovieDataStore(network: r.resolve(Networking.self),
+                                 translation: r.resolve(TranslationLayer.self))
+                            
+            
         }
         
     }
@@ -62,7 +66,7 @@ class SwinjectDependency: DependencyRegistry {
         
         container.register(MovieSearchViewModeling.self) { r in
             let dataStore = r.resolve(MovieDataStore.self,name:DependencyNames.remoteMovieDataStore)
-            return MovieSearchViewModel(movieDataStore:dataStore)
+            return MovieSearchViewModel(movieDataStore:dataStore!)
         }
         
         //        container.register(SpyListPresenter.self) { r in SpyListPresenterImpl(modelLayer: r.resolve(ModelLayer.self)!) }
