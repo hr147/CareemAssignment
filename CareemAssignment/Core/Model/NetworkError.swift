@@ -1,6 +1,6 @@
 //
 //  NetworkError.swift
-//  SwinjectMVVMExample
+// 
 //
 //  Created by Haroon Ur Rasheed on 10/15/17.
 //  Copyright © 2017 Haroon Ur Rasheed. All rights reserved.
@@ -27,6 +27,7 @@ public enum NetworkError: Error, CustomStringConvertible {
     /// Incorrect data returned from the server.
     case IncorrectDataReturned
     
+    case RequestFailed
     
     case ServerError(message:String)
     
@@ -120,17 +121,20 @@ public enum NetworkError: Error, CustomStringConvertible {
         let text: String
         switch self {
         case .Unknown:
-            text = "NetworkError_Unknown"
+            text = "Something went wrong.!"
         case .NotConnectedToInternet:
             text = "No internet connection available."
         case .InternationalRoamingOff:
             text = "NetworkError_InternationalRoamingOff"
         case .NotReachedServer:
-            text = "NetworkError_NotReachedServer"
+            text = "Server is not ReachedServer"
         case .ConnectionLost:
-            text = "NetworkError_ConnectionLost"
+            text = "Network Connection Lost"
         case .IncorrectDataReturned:
-            text = "NetworkError_IncorrectDataReturned"
+            text = "IncorrectDataReturned"
+        
+        case .RequestFailed:
+            text = "Request is not completed."
             
         case .ServerError(let message):
             text = message

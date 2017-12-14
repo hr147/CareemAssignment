@@ -5,7 +5,7 @@ import SwinjectStoryboard
 protocol DependencyRegistry {
     
     var container: Container { get }
-    func makeRootCoordinator(rootViewController: UIViewController) -> RootCoordinator
+    
 
 }
 
@@ -22,17 +22,16 @@ class SwinjectDependency: DependencyRegistry {
         self.container = container
         
         registerDependencies()
-        registerPresenters()
+        registerDataStores()
+        registerViewModels()
         registerViewControllers()
     }
     
     func registerDependencies() {
         
-        container.register(RootCoordinator.self) { (r, rootViewController: UIViewController) in
-            return AppRootCoordinator(with: rootViewController)
-        }.inObjectScope(.container)
-//
-//        container.register(NetworkLayer.self    ) { _ in NetworkLayerImpl()  }.inObjectScope(.container)
+
+        container.register(Networking.self) { _ in AlamofireNetwork()  }.inObjectScope(.container)
+        container.register(TranslationLayer.self) { _ in JSONTranslation()  }.inObjectScope(.container)
 //        container.register(DataLayer.self       ) { _ in DataLayerImpl()     }.inObjectScope(.container)
 //        container.register(SpyTranslator.self   ) { _ in SpyTranslatorImpl() }.inObjectScope(.container)
 //
@@ -47,12 +46,35 @@ class SwinjectDependency: DependencyRegistry {
 //        }.inObjectScope(.container)
     }
     
-    func registerPresenters() {
-//        container.register(SpyListPresenter.self) { r in SpyListPresenterImpl(modelLayer: r.resolve(ModelLayer.self)!) }
-//        container.register( DetailPresenter.self) { (r, spy: SpyDTO)  in DetailPresenterImpl(with: spy) }
-//        container.register(SpyCellPresenter.self) { (r, spy: SpyDTO) in SpyCellPresenterImpl(with: spy) }
-//        container.register(SecretDetailsPresenter.self) { (r, spy: SpyDTO) in SecretDetailsPresenterImpl(with: spy) }
+    
+    func registerDataStores(){
+        
+        
+        container.register(MovieDataStore.self,
+                           name: DependencyNames.remoteMovieDataStore){ r  in
+            
+                            return RemoteMovieDataStore(network: r.resolve(Networking.self),
+                                 translation: r.resolve(TranslationLayer.self))
+                            
+            
+        }
+        
     }
+    
+    func registerViewModels() {
+        
+        
+        container.register(MovieSearchViewModeling.self) { r in
+            let dataStore = r.resolve(MovieDataStore.self,name:DependencyNames.remoteMovieDataStore)
+            return MovieSearchViewModel(movieDataStore:dataStore!)
+        }
+        
+        //        container.register(SpyListPresenter.self) { r in SpyListPresenterImpl(modelLayer: r.resolve(ModelLayer.self)!) }
+        //        container.register( DetailPresenter.self) { (r, spy: SpyDTO)  in DetailPresenterImpl(with: spy) }
+        //        container.register(SpyCellPresenter.self) { (r, spy: SpyDTO) in SpyCellPresenterImpl(with: spy) }
+        //        container.register(SecretDetailsPresenter.self) { (r, spy: SpyDTO) in SecretDetailsPresenterImpl(with: spy) }
+    }
+   
     
     func registerViewControllers() {
 //        container.register(SecretDetailsViewController.self) { (r, spy: SpyDTO) in
@@ -67,14 +89,6 @@ class SwinjectDependency: DependencyRegistry {
 //                vc.configure(with: presenter, navigationCoordinator: self.navigationCoordinator)
 //            return vc
 //        }
-    }
-
-    
-    
-    func makeRootCoordinator(rootViewController: UIViewController) -> RootCoordinator {
-        
-        rootCoordinator = container.resolve(RootCoordinator.self, argument: rootViewController)!
-        return rootCoordinator
     }
     
 }

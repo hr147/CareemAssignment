@@ -10,13 +10,13 @@
 
 //import ObjectMapper
 
+typealias DataResponseHandler<T> = (DataResponseModel<T>) -> Void
+typealias ResultHandler<T> = (ResultType<T>) -> Void
 
 protocol Networking {
     
-    typealias DataResponseHandler<T> = (DataResponseModel<T>) -> Void
-    typealias ResultHandler<T> = (ResultType<T>) -> Void
 
-    //func requestObject<T:Mappable>(_ router: APIRoutering,completionHandler: @escaping NPResponseHandler<T>)
+    func requestObject<T:Codable>(_ router: APIRoutering,completionHandler: @escaping DataResponseHandler<T>)
     
     //func requestArray<T:Mappable>(_ router: APIRoutering,completionHandler: @escaping NPResponseHandler<[T]>)
     

@@ -16,12 +16,14 @@ extension SwinjectStoryboard {
         func main() {
             dependencyRegistry.container.storyboardInitCompleted(MovieSearchViewController.self) { r, vc in
 
-                let coordinator = dependencyRegistry.makeRootCoordinator(rootViewController: vc)
+                let coordinator = AppRootCoordinator(with: vc)
 
                 setupData(resolver: r, navigationCoordinator: coordinator)
 
-                //let presenter = r.resolve(SpyListPresenter.self)!
+                let viewModel = r.resolve(MovieSearchViewModeling.self)!
 
+                vc.movieViewModel = viewModel
+                vc.navigationCoordinator = coordinator
                 //NOTE: We don't have access to the constructor for this VC so we are using method injection
 //                vc.configure(with: presenter,
 //            navigationCoordinator: coordinator,
