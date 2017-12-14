@@ -11,35 +11,56 @@ protocol MovieSearchViewModeling {
   
     
     typealias RefreshHandlerAlias = () -> Void
-    var refresh:RefreshHandlerAlias? { get set}
+    var refresh:RefreshHandlerAlias? { get set }
+    
+    typealias ShowAlertHandlerAlias = (String) -> Void
+    var showAlertHandler:ShowAlertHandlerAlias? { get set }
+    
+    typealias LoadingHandlerAlias = (Bool) -> Void
+    var loadingHandler:LoadingHandlerAlias? { get set }
+    
     func movieCellViewModel(at row:Int) -> MovieTableViewCellViewModeling
     func totalRows() -> Int
-    func searchDidPress(with query:String)
+    func searchDidPress(withQuery query:String?)
+    func loadNextPage()
     
 }
 
 class MovieSearchViewModel:MovieSearchViewModeling {
     
-    var refresh: RefreshHandlerAlias?
     
+    enum MovieSearchViewModelError:Error{
+        
+        case invalidQuery
+        case resultNotFound
+        
+        var message:String {
+            
+            switch self {
+            case .invalidQuery: return "Please enter valid query"
+            case .resultNotFound: return "Result not found please try differnt query!"
+                
+            }
+        }
+        
+        
 
+    }
+    
+    var refresh: RefreshHandlerAlias?
+    var showAlertHandler: ShowAlertHandlerAlias?
+    var loadingHandler: LoadingHandlerAlias?
+    
     //MARK:- injected Properties
     fileprivate let movieDataStore:MovieDataStore!
     
     //MARK:- Private properties
     fileprivate var movieDataSource = [MovieDataTransferObject]()
-    fileprivate var movieResponseModel : MovieResponseModel?{
-        
-        didSet{
-            
-            guard let movies = movieResponseModel?.movies,movies.isEmpty == false else { return }
-            
-            self.movieDataSource += movies
-            
-            self.refresh?()
-            
-        }
-    }
+    
+    fileprivate var currentPage = 0
+    fileprivate var totalPage = 0
+    fileprivate var query:String = ""
+    
     
     //MARK:- Initializer
     
@@ -49,25 +70,119 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         
     }
     
-    //MARK:- MovieSearchViewModeling confirmance
+    //MARK:- Private methods
     
-    func searchDidPress(with query: String) {
+    private func validateQuery(query:String?) throws -> String {
         
-        let request = MovieRequestModel(query: "batman", pageNumber: 1)
-        
-        
-        
-        movieDataStore.search(with: request) {[weak self] result in
-            
-            switch result {
-                
-            case .failure(let error): break
-            case .success(let response):
-                
-                self?.movieResponseModel = response
-            }
+        guard let _query = query, _query.isEmpty == false else {
+            throw MovieSearchViewModelError.invalidQuery
             
         }
+        
+        return _query
+        
+    }
+    
+    
+    func generateRequest(withQuery query:String?) throws -> MovieRequestModel {
+        
+        guard let _query = query, _query.isEmpty == false else {
+            throw MovieSearchViewModelError.invalidQuery
+            
+        }
+        
+        let nextPage = currentPage + 1
+        
+        self.query = _query
+        
+        return MovieRequestModel(query: _query, pageNumber: nextPage)
+        
+    }
+    
+    
+    func canLoadNextPage() -> Bool {
+        
+        if currentPage >= totalPage {
+            
+            return false
+        }
+        
+        return true
+    }
+    
+    //MARK:- MovieSearchViewModeling confirmance
+    func loadNextPage() {
+    
+        if canLoadNextPage() == false {
+            return
+        }
+        
+        fetchMovies(with: query)
+        
+        
+    }
+    
+    func searchDidPress(withQuery query:String?) {
+        
+        //reset paging information
+        totalPage = 1
+        currentPage = 0
+        
+        //Removing all prviously search record & refresh UI
+        movieDataSource.removeAll()
+        refresh?()
+        
+        fetchMovies(with: query)
+        
+    }
+    
+    func fetchMovies(with query: String?) {
+        
+        do {
+            
+            let request = try generateRequest(withQuery: query)
+            
+            loadingHandler?(true)
+            movieDataStore.search(with: request) {[weak self] result in
+                
+                self?.loadingHandler?(false)
+                switch result {
+                    
+                case .failure(let error):
+                 
+                    self?.showAlertHandler?(error.description)
+                    
+                case .success(let response):
+                    
+                    if response.movies.isEmpty {
+                        
+                        self?.showAlertHandler?(MovieSearchViewModelError.resultNotFound.message)
+                        break
+                    }
+                    
+                    //Append movies result
+                    self?.movieDataSource += response.movies
+                    
+                    //update paging info
+                    self?.totalPage = response.totalPages
+                    self?.currentPage = response.page
+                    
+                    //refresh UI for new records
+                    self?.refresh?()
+                    
+                    
+                }
+                
+            }
+        } catch  let error as MovieSearchViewModelError {
+            
+            showAlertHandler?(error.message)
+        
+        } catch {
+            
+            showAlertHandler?("Some thing went wrong")
+        }
+        
         
     }
     

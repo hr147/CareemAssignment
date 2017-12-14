@@ -11,6 +11,7 @@ import UIKit
 class MovieSearchViewController: UIViewController {
     
     @IBOutlet weak var movieTableView: UITableView!
+    @IBOutlet weak var movieUIActivityIndicatorView: UIActivityIndicatorView!
     
     //MARK:- injected Properties
     weak var navigationCoordinator:RootCoordinator!
@@ -18,9 +19,37 @@ class MovieSearchViewController: UIViewController {
         
         didSet{
             
+            //setup callbacks
+            
+            // Refresh TableView
             self.movieViewModel.refresh = {[unowned self] in
                 
                 self.movieTableView.reloadData()
+                
+            }
+            
+            //Show Alert Message
+            self.movieViewModel.showAlertHandler = {[unowned self] message in
+                
+                let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+            //Loading progress
+            self.movieViewModel.loadingHandler = {[unowned self] isLoading in
+                
+                if isLoading {
+                
+                    self.movieUIActivityIndicatorView.startAnimating()
+                    
+                }else{
+                    
+                    self.movieUIActivityIndicatorView.stopAnimating()
+                    
+                }
                 
             }
             
@@ -28,16 +57,25 @@ class MovieSearchViewController: UIViewController {
         
     }
     
-   
+    //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureUI()
         
-        movieViewModel.searchDidPress(with: "")
-        // Do any additional setup after loading the view.
     }
 
-    //MARK:- User Actions
+    //MARK:- View Private Methods
+    
+    private func configureUI() {
+        
+        //remove extra cells
+        movieTableView.tableFooterView = UIView()
+        
+        //busy indicator configured
+        movieViewModel.loadingHandler?(false)
+        
+    }
 
 }
 
@@ -60,8 +98,30 @@ extension MovieSearchViewController : UITableViewDataSource {
         
         cell.configure(with: cellModel)
         
+        
+        if indexPath.row == movieViewModel.totalRows()-1 && movieUIActivityIndicatorView.isAnimating == false {
+            
+            movieViewModel.loadNextPage()
+            
+        }
+        
         return cell
     }
     
 }
 
+extension MovieSearchViewController : UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        movieViewModel.searchDidPress(withQuery: searchBar.text)
+        searchBar.resignFirstResponder()
+        
+    }
+    
+}

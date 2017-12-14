@@ -46,8 +46,9 @@ class AlamofireNetwork: Networking {
                         completionHandler(response)
                         
                         
-                    } catch let error {
-                        let error = NetworkError(error: error as NSError)
+                    } catch{
+                        
+                        let error:NetworkError = .ServerError(message: "Json is not properly parsed")
                         let response = DataResponseModel<T>(result: .failure(error))
                         completionHandler(response)
                     }

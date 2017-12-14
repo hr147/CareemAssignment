@@ -11,7 +11,7 @@ import Foundation
 struct MovieDataTransferObject:Codable {
 
     let name:String
-    let poster:String
+    let poster:String?
     let releaseDate:String
     let description:String
     
