@@ -14,7 +14,7 @@ protocol APIRoutering {
     var method: Alamofire.HTTPMethod { get }
     var encoding: Alamofire.ParameterEncoding? { get }
     var path: String { get }
-    var parameters: [String: Any]? { get }
+    var parameters: [String:Any]? { get }
     var baseUrl: String { get }
     var httpHeaders: [String : String]? { get }
 

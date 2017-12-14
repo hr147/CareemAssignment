@@ -8,7 +8,6 @@
 
 protocol MovieDataStore {
     
-    
-    
+    func search(with request:MovieRequestModel , completion: @escaping ResultHandler<MovieDataTransferObject>)
 }
 

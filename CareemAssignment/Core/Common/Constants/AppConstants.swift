@@ -23,3 +23,14 @@ struct DependencyNames {
     static let remoteMovieDataStore = String(describing:RemoteMovieDataStore.self)
     
 }
+
+
+struct APPKeys {
+    
+    struct APIKeys {
+        
+        static let themoviedb = "2696829a81b1b5827d515ff121700838"
+        
+    }
+    
+}

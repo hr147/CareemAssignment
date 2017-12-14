@@ -25,6 +25,8 @@ class MovieSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        movieViewModel.searchDidPress(with: "")
         // Do any additional setup after loading the view.
     }
 
