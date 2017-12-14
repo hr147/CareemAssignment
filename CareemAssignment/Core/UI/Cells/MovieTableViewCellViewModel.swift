@@ -34,7 +34,7 @@ struct MovieTableViewCellViewModel:MovieTableViewCellViewModeling {
     var name: String { return movie.name }
     var overrivew: String {return movie.description}
     var release: String {return movie.releaseDate}
-    var posterPath: String {return movie.poster ?? "" }
+    var posterPath: String {return movie.posterFullPath() ?? "" }
     
     
 }

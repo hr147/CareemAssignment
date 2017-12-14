@@ -31,6 +31,7 @@ extension MovieTableViewCell {
         
         self.viewModel = viewModel
         
+        posterImageView?.lazyLoadImage(withUrlString: viewModel.posterPath, placeholderImage: nil)
         titleLabel.text = viewModel.name
         releaseLabel.text = viewModel.release
         overviewLabel.text = viewModel.overrivew

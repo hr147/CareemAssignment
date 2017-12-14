@@ -9,6 +9,7 @@
 struct APIURLs {
     
     static let baseURL = "http://api.themoviedb.org/3/"
+    static let imageBaseURL = "http://image.tmdb.org/t/p/"
     
     struct Paths {
         

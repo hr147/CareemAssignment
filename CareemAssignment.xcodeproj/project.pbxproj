@@ -13,6 +13,8 @@
 		BE2A10F61FE16A780097039D /* MovieDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */; };
 		BE2A10FA1FE177820097039D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F91FE177820097039D /* MovieResponseModel.swift */; };
 		BE2A10FC1FE177940097039D /* MovieRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10FB1FE177940097039D /* MovieRequestModel.swift */; };
+		BE73735E1FE307470026CE6E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73735D1FE307470026CE6E /* Kingfisher.framework */; };
+		BE7373601FE307BC0026CE6E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73735F1FE307BC0026CE6E /* UIImageView+Extension.swift */; };
 		BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CA41FE254D300700B4F /* JSONTranslation.swift */; };
 		BE796CA81FE25A7400700B4F /* DataSourceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CA71FE25A7400700B4F /* DataSourceError.swift */; };
 		BE796CAB1FE281CE00700B4F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CAA1FE281CE00700B4F /* MovieTableViewCell.swift */; };
@@ -55,6 +57,8 @@
 		BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataTransferObject.swift; sourceTree = "<group>"; };
 		BE2A10F91FE177820097039D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
 		BE2A10FB1FE177940097039D /* MovieRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequestModel.swift; sourceTree = "<group>"; };
+		BE73735D1FE307470026CE6E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		BE73735F1FE307BC0026CE6E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		BE796CA41FE254D300700B4F /* JSONTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTranslation.swift; sourceTree = "<group>"; };
 		BE796CA71FE25A7400700B4F /* DataSourceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceError.swift; sourceTree = "<group>"; };
 		BE796CAA1FE281CE00700B4F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				BEEDB16D1FE1017200DBD58E /* SwinjectStoryboard.framework in Frameworks */,
 				BEEDB16E1FE1017200DBD58E /* Swinject.framework in Frameworks */,
 				BEEDB16F1FE1017200DBD58E /* Alamofire.framework in Frameworks */,
+				BE73735E1FE307470026CE6E /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,7 @@
 		BE2A10ED1FE148640097039D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BE73735F1FE307BC0026CE6E /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 		BEEDB1691FE1017100DBD58E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE73735D1FE307470026CE6E /* Kingfisher.framework */,
 				BEEDB16C1FE1017200DBD58E /* Alamofire.framework */,
 				BEEDB16B1FE1017200DBD58E /* Swinject.framework */,
 				BEEDB16A1FE1017200DBD58E /* SwinjectStoryboard.framework */,
@@ -477,11 +484,13 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectStoryboard.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,6 +507,7 @@
 				BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */,
 				BE796CAB1FE281CE00700B4F /* MovieTableViewCell.swift in Sources */,
 				BEAD8E1E1FE108B100546C7A /* NetworkError.swift in Sources */,
+				BE7373601FE307BC0026CE6E /* UIImageView+Extension.swift in Sources */,
 				BEAD8E181FE1075E00546C7A /* APIRoutering.swift in Sources */,
 				BE2A10F41FE14C4D0097039D /* RemoteMovieDataStore.swift in Sources */,
 				BE2A10FC1FE177940097039D /* MovieRequestModel.swift in Sources */,
