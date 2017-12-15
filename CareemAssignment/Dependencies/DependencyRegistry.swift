@@ -58,7 +58,7 @@ class SwinjectDependency: DependencyRegistry {
         
         container.register(MovieDataStore.self){ r  in
             
-                            return RemoteMovieDataStore(network: r.resolve(Networking.self),
+                            return AlamofireMovieDataStore(network: r.resolve(Networking.self),
                                  translation: r.resolve(TranslationLayer.self))
                             
             
