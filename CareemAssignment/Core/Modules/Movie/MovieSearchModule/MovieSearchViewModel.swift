@@ -53,7 +53,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     
     //MARK:- injected Properties
     fileprivate let movieDataStore:MovieDataStore!
-    
+    fileprivate let queryDataStore:QueryDataStore!
     //MARK:- Private properties
     fileprivate var movieDataSource = [MovieDataTransferObject]()
     
@@ -64,9 +64,10 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     
     //MARK:- Initializer
     
-    init(movieDataStore:MovieDataStore) {
+    init(movieDataStore:MovieDataStore,queryDataStore:QueryDataStore) {
         
         self.movieDataStore = movieDataStore
+        self.queryDataStore = queryDataStore
         
     }
     
@@ -124,6 +125,18 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     
     func searchDidPress(withQuery query:String?) {
         
+        
+        queryDataStore.fetchRecentQueries(withTopRecent: 10) { result in
+            
+            switch result {
+                
+            case .failure(let error):
+                print(error.description)
+            case .success(let quries):
+                print(quries)
+            }
+        }
+        
         //reset paging information
         totalPage = 1
         currentPage = 0
@@ -133,6 +146,22 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         refresh?()
         
         fetchMovies(with: query)
+        
+    }
+    
+    func saveQuery() {
+        
+        queryDataStore.insert(withQuery: query) { result in
+            
+            switch result {
+                
+            case .success(let value):
+                print(value)
+            case .failure(let error):
+                print(error.description)
+            }
+            
+        }
         
     }
     
@@ -169,7 +198,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
                     
                     //refresh UI for new records
                     self?.refresh?()
-                    
+                    self?.saveQuery()
                     
                 }
                 

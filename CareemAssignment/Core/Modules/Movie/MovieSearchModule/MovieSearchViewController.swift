@@ -61,6 +61,8 @@ class MovieSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         configureUI()
         
     }
