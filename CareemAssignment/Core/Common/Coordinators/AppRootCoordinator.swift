@@ -11,6 +11,7 @@ import UIKit
 
 protocol RootCoordinator: class {
     
+    var qureyDidSelectHandler:((String)->Void)? { get set }
     func showPopupList(withDataSource data:[String])
     func hidePopupList()
     
@@ -19,8 +20,10 @@ protocol RootCoordinator: class {
 
 class AppRootCoordinator: RootCoordinator {
     
-    fileprivate var rootViewController: MovieSearchViewController
     
+    var qureyDidSelectHandler: ((String) -> Void)?
+    
+    fileprivate var rootViewController: MovieSearchViewController
     
     init(with rootViewController: MovieSearchViewController) {
         
@@ -35,6 +38,12 @@ class AppRootCoordinator: RootCoordinator {
         
         menuTableViewController = MenuTableViewController()
         menuTableViewController?.dataSource = data
+        menuTableViewController?.menuItemSelectedHandler = {[weak self] selectedItem in
+            
+            self?.qureyDidSelectHandler?(selectedItem)
+
+        }
+        
         
         if let queryTableView = menuTableViewController?.tableView {
             
