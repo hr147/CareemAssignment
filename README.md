@@ -1,7 +1,7 @@
 # Movie Search List
  
 
-## Code Overview
+## Project Overview
 
 This project is developed using MVVM archtecture and also used flow controllers pettern to manage navigations.
 
