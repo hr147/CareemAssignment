@@ -15,6 +15,7 @@
 		BE4A91D21FE3FEFE00BF99FA /* CoreDataQueryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A91D11FE3FEFE00BF99FA /* CoreDataQueryDataStore.swift */; };
 		BE4C0F311FE4522600311E19 /* MovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C0F2F1FE4522600311E19 /* MovieDataStore.swift */; };
 		BE4C0F321FE4522600311E19 /* QueryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C0F301FE4522600311E19 /* QueryDataStore.swift */; };
+		BE4C0F391FE462FC00311E19 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C0F381FE462FC00311E19 /* MenuTableViewController.swift */; };
 		BE73735E1FE307470026CE6E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73735D1FE307470026CE6E /* Kingfisher.framework */; };
 		BE7373601FE307BC0026CE6E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73735F1FE307BC0026CE6E /* UIImageView+Extension.swift */; };
 		BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE796CA41FE254D300700B4F /* JSONTranslation.swift */; };
@@ -64,6 +65,7 @@
 		BE4A91D11FE3FEFE00BF99FA /* CoreDataQueryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataQueryDataStore.swift; sourceTree = "<group>"; };
 		BE4C0F2F1FE4522600311E19 /* MovieDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDataStore.swift; sourceTree = "<group>"; };
 		BE4C0F301FE4522600311E19 /* QueryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDataStore.swift; sourceTree = "<group>"; };
+		BE4C0F381FE462FC00311E19 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		BE73735D1FE307470026CE6E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		BE73735F1FE307BC0026CE6E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		BE796CA41FE254D300700B4F /* JSONTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTranslation.swift; sourceTree = "<group>"; };
@@ -188,6 +190,14 @@
 			path = AlamofireDataStores;
 			sourceTree = "<group>";
 		};
+		BE4C0F3E1FE5764600311E19 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C0F381FE462FC00311E19 /* MenuTableViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		BE796CA31FE2549700700B4F /* Translation */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,7 @@
 		BEAD8E081FE105CD00546C7A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BE4C0F3E1FE5764600311E19 /* Common */,
 				BEAD8E4E1FE1329A00546C7A /* Movie */,
 			);
 			path = Modules;
@@ -572,6 +583,7 @@
 				BEDDDBC61FE3A96900560342 /* QueryManagedObject+CoreDataClass.swift in Sources */,
 				BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */,
 				BE796CAB1FE281CE00700B4F /* MovieTableViewCell.swift in Sources */,
+				BE4C0F391FE462FC00311E19 /* MenuTableViewController.swift in Sources */,
 				BEAD8E1E1FE108B100546C7A /* NetworkError.swift in Sources */,
 				BE7373601FE307BC0026CE6E /* UIImageView+Extension.swift in Sources */,
 				BEAD8E181FE1075E00546C7A /* APIRoutering.swift in Sources */,

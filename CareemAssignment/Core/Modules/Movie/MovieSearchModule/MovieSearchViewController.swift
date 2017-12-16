@@ -10,6 +10,7 @@ import UIKit
 
 class MovieSearchViewController: UIViewController {
     
+    @IBOutlet weak var movieSearchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
     @IBOutlet weak var movieUIActivityIndicatorView: UIActivityIndicatorView!
     
@@ -35,6 +36,13 @@ class MovieSearchViewController: UIViewController {
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(okAction)
                 self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+            //Show Saved queies List
+            self.movieViewModel.showSavedQueriesHandler = {[unowned self] quries in
+                
+                self.navigationCoordinator.showPopupList(withDataSource: quries)
                 
             }
             
@@ -114,16 +122,23 @@ extension MovieSearchViewController : UITableViewDataSource {
 
 extension MovieSearchViewController : UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        movieViewModel.searchDidBegin()
+        
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         searchBar.resignFirstResponder()
+        navigationCoordinator.hidePopupList()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         movieViewModel.searchDidPress(withQuery: searchBar.text)
         searchBar.resignFirstResponder()
-        
+        navigationCoordinator.hidePopupList()
     }
     
 }

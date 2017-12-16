@@ -121,6 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="J4s-8o-V9U"/>
                     </view>
                     <connections>
+                        <outlet property="movieSearchBar" destination="YC2-uh-RH9" id="KWW-Id-PuP"/>
                         <outlet property="movieTableView" destination="hnd-wd-Juk" id="bq2-ce-1N9"/>
                         <outlet property="movieUIActivityIndicatorView" destination="OlC-17-Y7d" id="oc1-zu-MNi"/>
                     </connections>
