@@ -10,11 +10,23 @@ import UIKit
 
 class MovieSearchViewController: UIViewController {
     
+    @IBOutlet weak var movieSearchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
     @IBOutlet weak var movieUIActivityIndicatorView: UIActivityIndicatorView!
     
     //MARK:- injected Properties
-    weak var navigationCoordinator:RootCoordinator!
+    weak var navigationCoordinator:RootCoordinator!{
+        
+        didSet{
+            
+            self.navigationCoordinator.qureyDidSelectHandler = {[unowned self] qurey in
+                
+                self.setQurey(qurey: qurey)
+            }
+            
+        }
+    }
+    
     var movieViewModel:MovieSearchViewModeling! {
         
         didSet{
@@ -38,11 +50,18 @@ class MovieSearchViewController: UIViewController {
                 
             }
             
+            //Show Saved queies List
+            self.movieViewModel.showSavedQueriesHandler = {[unowned self] quries in
+                
+                self.navigationCoordinator.showPopupList(withDataSource: quries)
+                
+            }
+            
             //Loading progress
             self.movieViewModel.loadingHandler = {[unowned self] isLoading in
                 
                 if isLoading {
-                
+                    
                     self.movieUIActivityIndicatorView.startAnimating()
                     
                 }else{
@@ -60,13 +79,21 @@ class MovieSearchViewController: UIViewController {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         
         configureUI()
         
     }
-
+    
+    //MARK:- Helper Method
+    
+    func setQurey(qurey:String)  {
+        
+        movieSearchBar.text = qurey
+        movieSearchBar.resignFirstResponder()
+        navigationCoordinator.hidePopupList()
+        movieViewModel.searchDidPress(withQuery: qurey)
+    }
+    
     //MARK:- View Private Methods
     
     private func configureUI() {
@@ -78,7 +105,8 @@ class MovieSearchViewController: UIViewController {
         movieViewModel.loadingHandler?(false)
         
     }
-
+    
+    
 }
 
 
@@ -87,14 +115,14 @@ extension MovieSearchViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return movieViewModel.totalRows()
-    
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier,
-                                                            for: indexPath) as!MovieTableViewCell
+                                                 for: indexPath) as!MovieTableViewCell
         
         let cellModel = movieViewModel.movieCellViewModel(at: indexPath.row)
         
@@ -114,16 +142,23 @@ extension MovieSearchViewController : UITableViewDataSource {
 
 extension MovieSearchViewController : UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        movieViewModel.searchDidBegin()
+        
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         searchBar.resignFirstResponder()
+        navigationCoordinator.hidePopupList()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         movieViewModel.searchDidPress(withQuery: searchBar.text)
         searchBar.resignFirstResponder()
-        
+        navigationCoordinator.hidePopupList()
     }
     
 }

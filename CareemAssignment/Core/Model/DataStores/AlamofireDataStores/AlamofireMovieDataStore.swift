@@ -29,28 +29,18 @@ enum MovieRouter :APIRoutering {
         switch self {
         case .search(let movieRequestModel):
             
-            
             return movieRequestModel
-//            if let encodedData = try? JSONEncoder().encode(movieRequestModel),
-//            let jsonModel = try? JSONSerialization.jsonObject(with: encodedData, options:.allowFragments) as? [String: Any]{
-//
-//                return jsonModel
-//            }
             
-            
-            //return ["api_key":"2696829a81b1b5827d515ff121700838",
-              //      "query":"batman",
-                //    "page":1]
         }
         
         
     }
     
 }
-struct RemoteMovieDataStore: MovieDataStore {
+struct AlamofireMovieDataStore: MovieDataStore {
     
-     let network:Networking!
-     let translation:TranslationLayer!
+    let network:Networking!
+    let translation:TranslationLayer!
     
     func search(with request:MovieRequestModel , completion: @escaping ResultHandler<MovieResponseModel>){
         
@@ -73,8 +63,8 @@ struct RemoteMovieDataStore: MovieDataStore {
         
     }
     
-
-   
+    
+    
     
     
     
