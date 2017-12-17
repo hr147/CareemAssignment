@@ -97,20 +97,113 @@ class CoreDataLayer: CareemDataLayer {
         return spies
         
     }
+
     
-    //    func fetch<T: Storable>(_ model: T.Type, predicate: NSPredicate? = nil, sorted: Sorted? = nil, completion: (([T]) -> ())) {
-    //        var objects = self.realm?.objects(model as! Object.Type)
+}
+
+
+class CoreDataOlderLayer: CareemDataLayer{
+    
+    fileprivate let objectModelName = "Careem"
+    fileprivate let objectModelExtension = "momd"
+    fileprivate let dbFilename = "Careem.sqlite"
+    fileprivate let appDomain = "com.venturedive.Careem"
+    
+    // MARK: - Core Data stack
+    
+    lazy var applicationDocumentsDirectory: URL = {
+        // The directory the application uses to store the Core Data store file.
+        // This code uses a directory named "com.srmds.<dbName>" in the application's documents Application Support directory.
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        return urls[urls.count-1]
+    }()
+    
     //
-    //        if let predicate = predicate {
-    //            objects = objects?.filter(predicate)
-    //        }
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        // The managed object model for the application. This property is not optional.
+        // It is a fatal error for the application not to be able to find and load its model.
+        let modelURL = Bundle.main.url(forResource: objectModelName, withExtension: objectModelExtension)!
+        
+        return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
+    
+    //Create main context reference, with MainQueueuConcurrency Type.
+    lazy var mainManagedObjectContextInstance: NSManagedObjectContext = {
+        var mainManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        mainManagedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        
+        return mainManagedObjectContext
+    }()
     //
-    //        if let sorted = sorted {
-    //            objects = objects?.sorted(byKeyPath: sorted.key, ascending: sorted.ascending)
-    //        }
-    //
-    //        completion(objects.flatMap { $0 as? T })
-    //    }
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        
+        // The persistent store coordinator for the application. This implementation creates and return a coordinator,
+        // having added the store for the application to it. This property is optional since there are legitimate error
+        // conditions that could cause the creation of the store to fail.
+        
+        // Create the coordinator and store
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        let url = self.applicationDocumentsDirectory.appendingPathComponent(dbFilename)
+        var failureReason = "There was an error creating or loading the application's saved data."
+        
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
+        } catch {
+            // Report any error we got.
+            var dict = [String: AnyObject]()
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data" as AnyObject?
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject?
+            
+            dict[NSUnderlyingErrorKey] = error as NSError
+            let wrappedError = NSError(domain: self.appDomain, code: 9999, userInfo: dict)
+            // Replace this with code to handle the error appropriately.
+            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
+            
+            abort()
+        }
+        
+        return coordinator
+    }()
+    
+    func save(finished: @escaping () -> Void) throws {
+        
+        try mainManagedObjectContextInstance.save()
+    }
+    
+    func create<T>() -> T where T : NSManagedObject {
+        
+        let entityName = String(describing:T.self)
+        let entityDesc = NSEntityDescription.entity(forEntityName: entityName, in: mainManagedObjectContextInstance)
+        return T(entity: entityDesc!, insertInto: mainManagedObjectContextInstance)
+        
+    }
+    
+    func fetch<T>(withRequest request: CoreDataFetchRequest) throws -> [T] where T : NSManagedObject {
+        
+        let entityName = String(describing:T.self)
+        let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: entityName)
+        
+        if let sortedKey = request.sortedKey {
+            let sortOn = NSSortDescriptor(key: sortedKey, ascending: request.isAccending)
+            fetchRequest.sortDescriptors = [sortOn]
+        }
+        
+        if let predicate = request.predicate {
+            fetchRequest.predicate = predicate
+        }
+        
+        if let limit = request.fetchLimit {
+            fetchRequest.fetchLimit = limit
+        }
+        
+        
+        let models = try mainManagedObjectContextInstance.fetch(fetchRequest)
+        
+        return models
+        
+    }
+    
     
     
 }

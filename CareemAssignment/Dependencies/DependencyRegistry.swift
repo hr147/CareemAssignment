@@ -37,6 +37,10 @@ class SwinjectDependency: DependencyRegistry {
             
             container.register(CareemDataLayer.self) { _ in CoreDataLayer()  }.inObjectScope(.container)
             
+        }else{
+            container.register(CareemDataLayer.self) { _ in CoreDataOlderLayer()  }.inObjectScope(.container)
+            
+            
         }
         
     }
