@@ -11,8 +11,12 @@ import XCTest
 
 class MovieViewModelLoadNextPageTests: XCTestCase {
     
+    var queryDataStore:QueryDataStore!
+    
     override func setUp() {
         super.setUp()
+        queryDataStore = EmptyStubQueryDataStore()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -24,14 +28,10 @@ class MovieViewModelLoadNextPageTests: XCTestCase {
     func testLoadNextPage_ShouldLoadNextPageOnAvailablePages() {
         
         let movieDataStore = MorePageResultStubMovieDataStore()// in this reponse contain 2 pages.
-        let queryDataStore = StubQueryDataStore()
         let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
         
         viewModel.searchDidPress(withQuery: "Batman")
-        
-        //Apply delay to compelete search process
-         sleep(1)
-        
+                
         XCTAssertNoThrow(try viewModel.loadNextPage(), "Load next page successfully")
         
         
@@ -40,15 +40,10 @@ class MovieViewModelLoadNextPageTests: XCTestCase {
     func testLoadNextPage_ShouldNotLoadNextPageOnPagesEnd() {
         
         let movieDataStore = SuccessResultStubMovieDataStore()// in this reponse only 1 page exist.
-        let queryDataStore = StubQueryDataStore()
         let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
         
-        
         viewModel.searchDidPress(withQuery: "Batman")
-        
-        //Apply delay to compelete search process
-        sleep(1)
-        
+    
         XCTAssertThrowsError(try viewModel.loadNextPage(), "Cannot load next page")
         
     }

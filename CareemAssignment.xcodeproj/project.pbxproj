@@ -12,7 +12,6 @@
 		BE2A10F61FE16A780097039D /* MovieDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */; };
 		BE2A10FA1FE177820097039D /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F91FE177820097039D /* MovieResponseModel.swift */; };
 		BE2A10FC1FE177940097039D /* MovieRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10FB1FE177940097039D /* MovieRequestModel.swift */; };
-		BE3F8CB01FE6342300226107 /* MovieDataTransferObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8CAF1FE6342300226107 /* MovieDataTransferObjectTests.swift */; };
 		BE3F8CB21FE635BB00226107 /* StubMovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8CB11FE635BB00226107 /* StubMovieDataStore.swift */; };
 		BE3F8CB61FE63CF300226107 /* StubQueryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8CB51FE63CF300226107 /* StubQueryDataStore.swift */; };
 		BE3F8CB91FE6691400226107 /* MovieViewModelSearchQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F8CB81FE6691400226107 /* MovieViewModelSearchQueryTests.swift */; };
@@ -67,7 +66,6 @@
 		BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataTransferObject.swift; sourceTree = "<group>"; };
 		BE2A10F91FE177820097039D /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
 		BE2A10FB1FE177940097039D /* MovieRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequestModel.swift; sourceTree = "<group>"; };
-		BE3F8CAF1FE6342300226107 /* MovieDataTransferObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataTransferObjectTests.swift; sourceTree = "<group>"; };
 		BE3F8CB11FE635BB00226107 /* StubMovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubMovieDataStore.swift; sourceTree = "<group>"; };
 		BE3F8CB51FE63CF300226107 /* StubQueryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubQueryDataStore.swift; sourceTree = "<group>"; };
 		BE3F8CB81FE6691400226107 /* MovieViewModelSearchQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModelSearchQueryTests.swift; sourceTree = "<group>"; };
@@ -181,14 +179,6 @@
 				BE3F8CB51FE63CF300226107 /* StubQueryDataStore.swift */,
 			);
 			path = DataStores;
-			sourceTree = "<group>";
-		};
-		BE3F8CAE1FE633CD00226107 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BE3F8CAF1FE6342300226107 /* MovieDataTransferObjectTests.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		BE3F8CB71FE668E300226107 /* MovieViewModel */ = {
@@ -477,7 +467,6 @@
 		BEE6A83C1FE0FB7E00EA047C /* CareemAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE3F8CAE1FE633CD00226107 /* Models */,
 				BE3F8CAD1FE633BC00226107 /* DataStores */,
 				BE3F8CAC1FE633AC00226107 /* ViewModels */,
 				BEE6A83F1FE0FB7E00EA047C /* Info.plist */,
@@ -662,7 +651,6 @@
 			files = (
 				BE3F8CBD1FE6694D00226107 /* MovieViewModelSavedQueryTests.swift in Sources */,
 				BE3F8CB91FE6691400226107 /* MovieViewModelSearchQueryTests.swift in Sources */,
-				BE3F8CB01FE6342300226107 /* MovieDataTransferObjectTests.swift in Sources */,
 				BE3F8CB21FE635BB00226107 /* StubMovieDataStore.swift in Sources */,
 				BE3F8CBB1FE6692E00226107 /* MovieViewModelLoadNextPageTests.swift in Sources */,
 				BE3F8CB61FE63CF300226107 /* StubQueryDataStore.swift in Sources */,

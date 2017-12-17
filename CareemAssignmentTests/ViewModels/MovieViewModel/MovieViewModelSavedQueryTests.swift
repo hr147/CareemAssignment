@@ -7,8 +7,11 @@
 //
 
 import XCTest
+@testable import CareemAssignment
 
 class MovieViewModelSavedQueryTests: XCTestCase {
+    
+    var movieDataStore = SuccessResultStubMovieDataStore()
     
     override func setUp() {
         super.setUp()
@@ -20,16 +23,37 @@ class MovieViewModelSavedQueryTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSavedQuery_ShouldShowSavedQuries() {
+        
+        let queryDataStore = DataStubQueryDataStore()
+        let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
+        
+        
+        // 1. Define an expectation
+        
+        let expect = expectation(description: "Result successfully fetectched")
+        
+        //only callback when 1 or more quiries found
+        viewModel.showSavedQueriesHandler = { quries in
+            
+            XCTAssertTrue(true)
+        
+            expect.fulfill()
+            
+        }
+        
+        viewModel.searchDidBegin()
+        
+        // 3. Wait for the expectation to be fulfilled
+        waitForExpectations(timeout: 1) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    
+    
     
 }

@@ -11,8 +11,13 @@ import XCTest
 
 class MovieViewModelSearchQueryTests: XCTestCase {
     
+    var queryDataStore:QueryDataStore!
+    
     override func setUp() {
         super.setUp()
+        
+        queryDataStore = EmptyStubQueryDataStore()
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -25,7 +30,6 @@ class MovieViewModelSearchQueryTests: XCTestCase {
     func testSearchQuery_ShouldShowResultOnSuccess() {
         
         let movieDataStore = SuccessResultStubMovieDataStore()
-        let queryDataStore = StubQueryDataStore()
         let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
         
         
@@ -59,7 +63,6 @@ class MovieViewModelSearchQueryTests: XCTestCase {
     func testSearchQuery_ShouldShowAlertOnEmptyQuery() {
         
         let movieDataStore = SuccessResultStubMovieDataStore()
-        let queryDataStore = StubQueryDataStore()
         let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
         
         
@@ -96,7 +99,6 @@ class MovieViewModelSearchQueryTests: XCTestCase {
     func testSearchQuery_ShouldShowAlertOnResultNoFound()  {
         
         let movieDataStore = EmptyResultStubMovieDataStore()
-        let queryDataStore = StubQueryDataStore()
         let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
         
         
@@ -137,7 +139,6 @@ class MovieViewModelSearchQueryTests: XCTestCase {
     func testSearchQuery_ShouldShowAlertOnNetworkIssue() {
         
         let movieDataStore = ErrorResultStubMovieDataStore()
-        let queryDataStore = StubQueryDataStore()
         let viewModel = MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
         
         
