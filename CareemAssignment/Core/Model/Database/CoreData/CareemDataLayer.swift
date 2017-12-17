@@ -37,7 +37,7 @@ class CoreDataLayer: CareemDataLayer {
     
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Careem")
+        let container = NSPersistentContainer(name: DataStoreNames.CoreData.persistenceName)
         container.viewContext.automaticallyMergesChangesFromParent = true
         //container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.loadPersistentStores(completionHandler: { storeDescription, error in
@@ -104,7 +104,7 @@ class CoreDataLayer: CareemDataLayer {
 
 class CoreDataOlderLayer: CareemDataLayer{
     
-    fileprivate let objectModelName = "Careem"
+    fileprivate let objectModelName = DataStoreNames.CoreData.persistenceName
     fileprivate let objectModelExtension = "momd"
     fileprivate let dbFilename = "Careem.sqlite"
     fileprivate let appDomain = "com.venturedive.Careem"

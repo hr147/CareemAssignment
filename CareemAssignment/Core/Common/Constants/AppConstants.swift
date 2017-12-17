@@ -18,14 +18,6 @@ struct APIURLs {
     
 }
 
-
-struct DependencyNames {
-    
-    static let remoteMovieDataStore = String(describing:AlamofireMovieDataStore.self)
-    
-}
-
-
 struct APPKeys {
     
     struct APIKeys {
@@ -34,4 +26,13 @@ struct APPKeys {
         
     }
     
+}
+
+struct DataStoreNames {
+    
+    struct CoreData {
+        
+        static let persistenceName = "Careem"
+        
+    }
 }
