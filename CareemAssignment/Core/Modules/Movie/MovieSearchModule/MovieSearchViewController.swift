@@ -131,7 +131,7 @@ extension MovieSearchViewController : UITableViewDataSource {
         
         if indexPath.row == movieViewModel.totalRows()-1 && movieUIActivityIndicatorView.isAnimating == false {
             
-            movieViewModel.loadNextPage()
+            try? movieViewModel.loadNextPage()
             
         }
         

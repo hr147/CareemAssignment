@@ -1,15 +1,14 @@
 //
-//  CareemAssignmentTests.swift
+//  MovieViewModelSavedQueryTests.swift
 //  CareemAssignmentTests
 //
-//  Created by Haroon Ur Rasheed on 12/13/17.
+//  Created by Haroon Ur Rasheed on 12/17/17.
 //  Copyright © 2017 Haroon Ur Rasheed. All rights reserved.
 //
 
 import XCTest
-@testable import CareemAssignment
 
-class CareemAssignmentTests: XCTestCase {
+class MovieViewModelSavedQueryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

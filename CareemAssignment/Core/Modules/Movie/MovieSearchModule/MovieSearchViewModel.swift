@@ -13,6 +13,9 @@ protocol MovieSearchViewModeling {
     typealias RefreshHandlerAlias = () -> Void
     var refresh:RefreshHandlerAlias? { get set }
     
+    typealias SearchResultLoadedHandlerAlias = () -> Void
+    var searchResultLoadedHandler:SearchResultLoadedHandlerAlias? { get set }
+    
     typealias ShowAlertHandlerAlias = (String) -> Void
     var showAlertHandler:ShowAlertHandlerAlias? { get set }
     
@@ -26,7 +29,7 @@ protocol MovieSearchViewModeling {
     func movieCellViewModel(at row:Int) -> MovieTableViewCellViewModeling
     func totalRows() -> Int
     func searchDidPress(withQuery query:String?)
-    func loadNextPage()
+    func loadNextPage() throws
     
 }
 
@@ -37,12 +40,14 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         
         case invalidQuery
         case resultNotFound
+        case noMorePageExist
         
         var message:String {
             
             switch self {
             case .invalidQuery: return "Please enter valid query"
             case .resultNotFound: return "Result not found please try differnt query!"
+            case .noMorePageExist: return "No more pages exist"
                 
             }
         }
@@ -55,7 +60,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     var showAlertHandler: ShowAlertHandlerAlias?
     var loadingHandler: LoadingHandlerAlias?
     var showSavedQueriesHandler: ShowSavedQueriesHandlerAlias?
-    
+    var searchResultLoadedHandler: SearchResultLoadedHandlerAlias?
     //MARK:- injected Properties
     fileprivate let movieDataStore:MovieDataStore!
     fileprivate let queryDataStore:QueryDataStore!
@@ -106,10 +111,10 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     }
     
     //MARK:- MovieSearchViewModeling confirmance
-    func loadNextPage() {
+    func loadNextPage() throws {
     
         if canLoadNextPage() == false {
-            return
+            throw MovieSearchViewModelError.noMorePageExist
         }
         
         fetchMovies(with: query)
@@ -167,7 +172,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         //refresh UI for new records
         refresh?()
         saveQuery()
-        
+        searchResultLoadedHandler?()
     }
     
 }
