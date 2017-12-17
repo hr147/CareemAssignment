@@ -79,11 +79,6 @@ class SwinjectDependency: DependencyRegistry {
     
     func registerViewControllers() {
         
-//        container.register(QueryTableViewController.self) { r, vc in
-//            
-//            vc.queryViewModel = r.resolve(QueryViewModeling.self)
-//            
-//        }
         
     }
     
