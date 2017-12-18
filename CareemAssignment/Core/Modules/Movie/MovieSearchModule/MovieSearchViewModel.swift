@@ -8,7 +8,7 @@
 
 
 protocol MovieSearchViewModeling {
-  
+    
     
     typealias RefreshHandlerAlias = () -> Void
     var refresh:RefreshHandlerAlias? { get set }
@@ -53,7 +53,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         }
         
         
-
+        
     }
     
     var refresh: RefreshHandlerAlias?
@@ -112,7 +112,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     
     //MARK:- MovieSearchViewModeling confirmance
     func loadNextPage() throws {
-    
+        
         if canLoadNextPage() == false {
             throw MovieSearchViewModelError.noMorePageExist
         }
@@ -132,7 +132,15 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         movieDataSource.removeAll()
         refresh?()
         
-        fetchMovies(with: query)
+        
+        //Search movies against query & save it in db 
+        fetchMovies(with: query) {[weak self] movies in
+            
+            if movies.isEmpty == false {
+                self?.saveQuery()
+                self?.searchResultLoadedHandler?()
+            }
+        }
         
     }
     
@@ -148,9 +156,9 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     }
     
     func totalRows() -> Int {
-     
+        
         return movieDataSource.count
-    
+        
     }
     
     func searchResult(withMovies movies:[MovieDataTransferObject],page:Int,totalPages:Int)  {
@@ -171,8 +179,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         
         //refresh UI for new records
         refresh?()
-        saveQuery()
-        searchResultLoadedHandler?()
+        
     }
     
 }
@@ -203,7 +210,7 @@ extension MovieSearchViewModel{
     }
     
     
-    func fetchMovies(with query: String?) {
+    func fetchMovies(with query: String?,completion:(([MovieDataTransferObject])->Void)? = nil) {
         
         do {
             
@@ -222,9 +229,10 @@ extension MovieSearchViewModel{
                 case .success(let response):
                     
                     self?.searchResult(withMovies: response.movies,
-                                             page: response.page,
+                                       page: response.page,
                                        totalPages: response.totalPages)
                     
+                    completion?(response.movies)
                 }
                 
             }
