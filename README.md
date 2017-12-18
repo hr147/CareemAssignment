@@ -11,6 +11,14 @@ This project is developed using MVVM archtecture along with flow-controllers pet
 - swift 4
 - carthage
 
+### Getting Started
+
+run following command on terminal
+
+```
+ carthage update --platform iOS
+```
+
 ### Code Structure & Sequence
 
 - Dependencies injected (Core Data , Alamofire , View Model , Data Stores) in following files
