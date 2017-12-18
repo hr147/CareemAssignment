@@ -1,0 +1,1727 @@
+{
+  "warnings": [
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/AppDelegate.swift",
+      "line": 16,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/AppDelegate.swift",
+      "line": 20,
+      "symbol": "AppDelegate.rootCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/AppDelegate.swift",
+      "line": 21,
+      "symbol": "AppDelegate.dependencyRegistry",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/AppDelegate.swift",
+      "line": 26,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 9,
+      "symbol": "APIURLs",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 11,
+      "symbol": "APIURLs.baseURL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 12,
+      "symbol": "APIURLs.imageBaseURL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 14,
+      "symbol": "APIURLs.Paths",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 16,
+      "symbol": "APIURLs.Paths.movieSearch",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 21,
+      "symbol": "APPKeys",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 23,
+      "symbol": "APPKeys.APIKeys",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 25,
+      "symbol": "APPKeys.APIKeys.themoviedb",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 31,
+      "symbol": "DataStoreNames",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 33,
+      "symbol": "DataStoreNames.CoreData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Constants/AppConstants.swift",
+      "line": 35,
+      "symbol": "DataStoreNames.CoreData.persistenceName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 12,
+      "symbol": "RootCoordinator",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 14,
+      "symbol": "RootCoordinator.qureyDidSelectHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 15,
+      "symbol": "RootCoordinator.showPopupList(withDataSource:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 16,
+      "symbol": "RootCoordinator.hidePopupList()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 21,
+      "symbol": "AppRootCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 24,
+      "symbol": "AppRootCoordinator.qureyDidSelectHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 26,
+      "symbol": "AppRootCoordinator.rootViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 28,
+      "symbol": "AppRootCoordinator.init(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 34,
+      "symbol": "AppRootCoordinator.menuTableViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 37,
+      "symbol": "AppRootCoordinator.showPopupList(withDataSource:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Coordinators/AppRootCoordinator.swift",
+      "line": 67,
+      "symbol": "AppRootCoordinator.hidePopupList()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Extensions/UIImageView+Extension.swift",
+      "line": 12,
+      "symbol": "ImageLazyLoading",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Extensions/UIImageView+Extension.swift",
+      "line": 14,
+      "symbol": "ImageLazyLoading.lazyLoadImage(withUrlString:placeholderImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Extensions/UIImageView+Extension.swift",
+      "line": 20,
+      "symbol": "UIImageView.lazyLoadImage(withUrlString:placeholderImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Protocols/DataStores/MovieDataStore.swift",
+      "line": 9,
+      "symbol": "MovieDataStore",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Protocols/DataStores/QueryDataStore.swift",
+      "line": 11,
+      "symbol": "QueryDataStore",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Protocols/DataStores/QueryDataStore.swift",
+      "line": 14,
+      "symbol": "QueryDataStore.insert(withQuery:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Common/Protocols/DataStores/QueryDataStore.swift",
+      "line": 15,
+      "symbol": "QueryDataStore.fetchRecentQueries(withTopRecent:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 11,
+      "symbol": "MovieRouter",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 15,
+      "symbol": "MovieRouter.search",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 17,
+      "symbol": "MovieRouter.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 23,
+      "symbol": "MovieRouter.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 27,
+      "symbol": "MovieRouter.parameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 40,
+      "symbol": "AlamofireMovieDataStore",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 42,
+      "symbol": "AlamofireMovieDataStore.network",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/AlamofireDataStores/AlamofireMovieDataStore.swift",
+      "line": 43,
+      "symbol": "AlamofireMovieDataStore.translation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/CoreDataDataStores/CoreDataQueryDataStore.swift",
+      "line": 13,
+      "symbol": "CoreDataQueryDataStore",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/CoreDataDataStores/CoreDataQueryDataStore.swift",
+      "line": 15,
+      "symbol": "CoreDataQueryDataStore.dataLayer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/CoreDataDataStores/CoreDataQueryDataStore.swift",
+      "line": 17,
+      "symbol": "CoreDataQueryDataStore.insert(withQuery:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/CoreDataDataStores/CoreDataQueryDataStore.swift",
+      "line": 55,
+      "symbol": "CoreDataQueryDataStore.fetchRecentQueries(withTopRecent:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataStores/CoreDataDataStores/CoreDataQueryDataStore.swift",
+      "line": 58,
+      "symbol": "CoreDataQueryDataStore.fetchRecentQueries(withTopRecent:completion:).generateError()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 11,
+      "symbol": "MovieDataTransferObject",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 13,
+      "symbol": "MovieDataTransferObject.MovieImageSize",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 14,
+      "symbol": "MovieDataTransferObject.MovieImageSize.w92",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 15,
+      "symbol": "MovieDataTransferObject.MovieImageSize.w185",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 16,
+      "symbol": "MovieDataTransferObject.MovieImageSize.w500",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 17,
+      "symbol": "MovieDataTransferObject.MovieImageSize.w780",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 20,
+      "symbol": "MovieDataTransferObject.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 21,
+      "symbol": "MovieDataTransferObject.poster",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 22,
+      "symbol": "MovieDataTransferObject.releaseDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 23,
+      "symbol": "MovieDataTransferObject.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 25,
+      "symbol": "MovieDataTransferObject.posterFullPath(withImageSize:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 33,
+      "symbol": "MovieDataTransferObject.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 34,
+      "symbol": "MovieDataTransferObject.CodingKeys.name",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 35,
+      "symbol": "MovieDataTransferObject.CodingKeys.poster",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 36,
+      "symbol": "MovieDataTransferObject.CodingKeys.releaseDate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/DataTransferObjects/MovieDataTransferObject.swift",
+      "line": 37,
+      "symbol": "MovieDataTransferObject.CodingKeys.description",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 12,
+      "symbol": "CoreDataFetchRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 14,
+      "symbol": "CoreDataFetchRequest.isAccending",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 15,
+      "symbol": "CoreDataFetchRequest.sortedKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 16,
+      "symbol": "CoreDataFetchRequest.predicate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 17,
+      "symbol": "CoreDataFetchRequest.fetchLimit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 20,
+      "symbol": "CoreDataFetchRequest.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 26,
+      "symbol": "CareemDataLayer",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 28,
+      "symbol": "CareemDataLayer.save(finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 29,
+      "symbol": "CareemDataLayer.create()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 30,
+      "symbol": "CareemDataLayer.fetch(withRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 35,
+      "symbol": "CoreDataLayer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 39,
+      "symbol": "CoreDataLayer.persistentContainer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 52,
+      "symbol": "CoreDataLayer.mainContext",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 60,
+      "symbol": "CoreDataLayer.save(finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 69,
+      "symbol": "CoreDataLayer.create()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 75,
+      "symbol": "CoreDataLayer.fetch(withRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 105,
+      "symbol": "CoreDataOlderLayer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 107,
+      "symbol": "CoreDataOlderLayer.objectModelName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 108,
+      "symbol": "CoreDataOlderLayer.objectModelExtension",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 109,
+      "symbol": "CoreDataOlderLayer.dbFilename",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 110,
+      "symbol": "CoreDataOlderLayer.appDomain",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 114,
+      "symbol": "CoreDataOlderLayer.applicationDocumentsDirectory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 123,
+      "symbol": "CoreDataOlderLayer.managedObjectModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 132,
+      "symbol": "CoreDataOlderLayer.mainManagedObjectContextInstance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 139,
+      "symbol": "CoreDataOlderLayer.persistentStoreCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 169,
+      "symbol": "CoreDataOlderLayer.save(finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 174,
+      "symbol": "CoreDataOlderLayer.create()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/CareemDataLayer.swift",
+      "line": 182,
+      "symbol": "CoreDataOlderLayer.fetch(withRequest:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataClass.swift",
+      "line": null,
+      "symbol": "QueryManagedObject",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataClass.swift",
+      "line": 14,
+      "symbol": "QueryManagedObject",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataProperties.swift",
+      "line": 16,
+      "symbol": "QueryManagedObject.fetchRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataProperties.swift",
+      "line": 20,
+      "symbol": "QueryManagedObject.stamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataProperties.swift",
+      "line": 21,
+      "symbol": "QueryManagedObject.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 11,
+      "symbol": "NetworkError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 30,
+      "symbol": "NetworkError.RequestFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 32,
+      "symbol": "NetworkError.ServerError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 34,
+      "symbol": "NetworkError.init(graphQLErrors:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 51,
+      "symbol": "NetworkError.init(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": null,
+      "symbol": "APIRoutering",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 11,
+      "symbol": "APIRoutering",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 14,
+      "symbol": "APIRoutering.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 15,
+      "symbol": "APIRoutering.encoding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 16,
+      "symbol": "APIRoutering.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 17,
+      "symbol": "APIRoutering.parameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 18,
+      "symbol": "APIRoutering.baseUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 19,
+      "symbol": "APIRoutering.httpHeaders",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 28,
+      "symbol": "APIRoutering.baseUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 36,
+      "symbol": "APIRoutering.encoding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/APIRoutering.swift",
+      "line": 42,
+      "symbol": "APIRoutering.httpHeaders",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/AlamofireNetwork.swift",
+      "line": 12,
+      "symbol": "AlamofireNetwork",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/AlamofireNetwork.swift",
+      "line": 14,
+      "symbol": "AlamofireNetwork.manager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/AlamofireNetwork.swift",
+      "line": 19,
+      "symbol": "AlamofireNetwork.requestObject(_:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/AlamofireRouterRequest.swift",
+      "line": 12,
+      "symbol": "AlamofireRouterRequest",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/AlamofireRouterRequest.swift",
+      "line": 15,
+      "symbol": "AlamofireRouterRequest.router",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/AlamofireRouterRequest.swift",
+      "line": 19,
+      "symbol": "AlamofireRouterRequest.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/Networking.swift",
+      "line": 16,
+      "symbol": "Networking",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Networks/AlamofireNetwork/Networking.swift",
+      "line": 19,
+      "symbol": "Networking.requestObject(_:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 11,
+      "symbol": "MovieRequestModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 15,
+      "symbol": "MovieRequestModel.apiKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 16,
+      "symbol": "MovieRequestModel.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 17,
+      "symbol": "MovieRequestModel.pageNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 19,
+      "symbol": "MovieRequestModel.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 20,
+      "symbol": "MovieRequestModel.CodingKeys.apiKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 21,
+      "symbol": "MovieRequestModel.CodingKeys.query",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/RequestModels/MovieRequestModel.swift",
+      "line": 22,
+      "symbol": "MovieRequestModel.CodingKeys.pageNumber",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/DataResponseModel.swift",
+      "line": 12,
+      "symbol": "ResultType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/DataResponseModel.swift",
+      "line": 13,
+      "symbol": "ResultType.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/DataResponseModel.swift",
+      "line": 14,
+      "symbol": "ResultType.failure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/DataResponseModel.swift",
+      "line": 17,
+      "symbol": "DataResponseModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/DataResponseModel.swift",
+      "line": 19,
+      "symbol": "DataResponseModel.result",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 11,
+      "symbol": "MovieResponseModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 13,
+      "symbol": "MovieResponseModel.page",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 14,
+      "symbol": "MovieResponseModel.totalResults",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 15,
+      "symbol": "MovieResponseModel.totalPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 16,
+      "symbol": "MovieResponseModel.movies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 18,
+      "symbol": "MovieResponseModel.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 19,
+      "symbol": "MovieResponseModel.CodingKeys.page",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 20,
+      "symbol": "MovieResponseModel.CodingKeys.totalResults",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 21,
+      "symbol": "MovieResponseModel.CodingKeys.totalPages",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/ResponseModels/MovieResponseModel.swift",
+      "line": 22,
+      "symbol": "MovieResponseModel.CodingKeys.movies",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Translation/JSONTranslation.swift",
+      "line": 11,
+      "symbol": "TranslationLayer",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Translation/JSONTranslation.swift",
+      "line": 13,
+      "symbol": "TranslationLayer.json(withModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Translation/JSONTranslation.swift",
+      "line": 17,
+      "symbol": "JSONTranslation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Translation/JSONTranslation.swift",
+      "line": 20,
+      "symbol": "JSONTranslation.json(withModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 12,
+      "symbol": "MenuTableViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 14,
+      "symbol": "MenuTableViewController.cellIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 15,
+      "symbol": "MenuTableViewController.dataSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 16,
+      "symbol": "MenuTableViewController.menuItemSelectedHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 20,
+      "symbol": "MenuTableViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 30,
+      "symbol": "MenuTableViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 37,
+      "symbol": "MenuTableViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Common/MenuTableViewController.swift",
+      "line": 47,
+      "symbol": "MenuTableViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": null,
+      "symbol": "MovieSearchViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": null,
+      "symbol": "MovieSearchViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 11,
+      "symbol": "MovieSearchViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 13,
+      "symbol": "MovieSearchViewController.movieSearchBar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 14,
+      "symbol": "MovieSearchViewController.movieTableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 15,
+      "symbol": "MovieSearchViewController.movieUIActivityIndicatorView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 18,
+      "symbol": "MovieSearchViewController.navigationCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 30,
+      "symbol": "MovieSearchViewController.movieViewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 80,
+      "symbol": "MovieSearchViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 89,
+      "symbol": "MovieSearchViewController.setQurey(qurey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 99,
+      "symbol": "MovieSearchViewController.configureUI()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 109,
+      "symbol": "MovieSearchViewController.isReachedToLastRow(row:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 125,
+      "symbol": "MovieSearchViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 131,
+      "symbol": "MovieSearchViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 156,
+      "symbol": "MovieSearchViewController.searchBarTextDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 163,
+      "symbol": "MovieSearchViewController.searchBarCancelButtonClicked(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewController.swift",
+      "line": 169,
+      "symbol": "MovieSearchViewController.searchBarSearchButtonClicked(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": null,
+      "symbol": "MovieSearchViewModel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 10,
+      "symbol": "MovieSearchViewModeling",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 14,
+      "symbol": "MovieSearchViewModeling.refresh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 17,
+      "symbol": "MovieSearchViewModeling.searchResultLoadedHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 20,
+      "symbol": "MovieSearchViewModeling.showAlertHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 23,
+      "symbol": "MovieSearchViewModeling.showSavedQueriesHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 26,
+      "symbol": "MovieSearchViewModeling.loadingHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 28,
+      "symbol": "MovieSearchViewModeling.searchDidBegin()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 29,
+      "symbol": "MovieSearchViewModeling.movieCellViewModel(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 30,
+      "symbol": "MovieSearchViewModeling.totalRows()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 31,
+      "symbol": "MovieSearchViewModeling.searchDidPress(withQuery:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 32,
+      "symbol": "MovieSearchViewModeling.loadNextPage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 36,
+      "symbol": "MovieSearchViewModel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 39,
+      "symbol": "MovieSearchViewModel.MovieSearchViewModelError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 41,
+      "symbol": "MovieSearchViewModel.MovieSearchViewModelError.invalidQuery",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 42,
+      "symbol": "MovieSearchViewModel.MovieSearchViewModelError.resultNotFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 43,
+      "symbol": "MovieSearchViewModel.MovieSearchViewModelError.noMorePageExist",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 45,
+      "symbol": "MovieSearchViewModel.MovieSearchViewModelError.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 60,
+      "symbol": "MovieSearchViewModel.movieDataStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 61,
+      "symbol": "MovieSearchViewModel.queryDataStore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 64,
+      "symbol": "MovieSearchViewModel.refresh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 65,
+      "symbol": "MovieSearchViewModel.showAlertHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 66,
+      "symbol": "MovieSearchViewModel.loadingHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 67,
+      "symbol": "MovieSearchViewModel.showSavedQueriesHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 68,
+      "symbol": "MovieSearchViewModel.searchResultLoadedHandler",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 69,
+      "symbol": "MovieSearchViewModel.movieDataSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 70,
+      "symbol": "MovieSearchViewModel.currentPage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 71,
+      "symbol": "MovieSearchViewModel.totalPage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 72,
+      "symbol": "MovieSearchViewModel.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 77,
+      "symbol": "MovieSearchViewModel.init(movieDataStore:queryDataStore:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 87,
+      "symbol": "MovieSearchViewModel.generateRequest(withQuery:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 103,
+      "symbol": "MovieSearchViewModel.canLoadNextPage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 115,
+      "symbol": "MovieSearchViewModel.loadNextPage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 126,
+      "symbol": "MovieSearchViewModel.searchDidPress(withQuery:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 152,
+      "symbol": "MovieSearchViewModel.movieCellViewModel(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 159,
+      "symbol": "MovieSearchViewModel.totalRows()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 165,
+      "symbol": "MovieSearchViewModel.searchResult(withMovies:page:totalPages:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 193,
+      "symbol": "MovieSearchViewModel.searchDidBegin()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 214,
+      "symbol": "MovieSearchViewModel.fetchMovies(with:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Modules/Movie/MovieSearchModule/MovieSearchViewModel.swift",
+      "line": 252,
+      "symbol": "MovieSearchViewModel.saveQuery()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": null,
+      "symbol": "MovieTableViewCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 11,
+      "symbol": "MovieTableViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 13,
+      "symbol": "MovieTableViewCell.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 15,
+      "symbol": "MovieTableViewCell.posterImageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 16,
+      "symbol": "MovieTableViewCell.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 17,
+      "symbol": "MovieTableViewCell.releaseLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 18,
+      "symbol": "MovieTableViewCell.overviewLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 20,
+      "symbol": "MovieTableViewCell.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCell.swift",
+      "line": 30,
+      "symbol": "MovieTableViewCell.configure(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 11,
+      "symbol": "MovieTableViewCellViewModeling",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 13,
+      "symbol": "MovieTableViewCellViewModeling.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 14,
+      "symbol": "MovieTableViewCellViewModeling.overrivew",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 15,
+      "symbol": "MovieTableViewCellViewModeling.release",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 16,
+      "symbol": "MovieTableViewCellViewModeling.posterPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 22,
+      "symbol": "MovieTableViewCellViewModel",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 25,
+      "symbol": "MovieTableViewCellViewModel.movie",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 28,
+      "symbol": "MovieTableViewCellViewModel.init(movie:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 34,
+      "symbol": "MovieTableViewCellViewModel.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 35,
+      "symbol": "MovieTableViewCellViewModel.overrivew",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 36,
+      "symbol": "MovieTableViewCellViewModel.release",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/UI/Cells/MovieTableViewCellViewModel.swift",
+      "line": 37,
+      "symbol": "MovieTableViewCellViewModel.posterPath",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 5,
+      "symbol": "DependencyRegistry",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 7,
+      "symbol": "DependencyRegistry.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 12,
+      "symbol": "SwinjectDependency",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 14,
+      "symbol": "SwinjectDependency.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 15,
+      "symbol": "SwinjectDependency.rootCoordinator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 18,
+      "symbol": "SwinjectDependency.init(container:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 30,
+      "symbol": "SwinjectDependency.registerDependencies()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 49,
+      "symbol": "SwinjectDependency.registerDataStores()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 69,
+      "symbol": "SwinjectDependency.registerViewModels()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/DependencyRegistry.swift",
+      "line": 84,
+      "symbol": "SwinjectDependency.registerViewControllers()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/SwinjectStoryboard+Extensions.swift",
+      "line": 9,
+      "symbol": "SwinjectStoryboard.setup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/SwinjectStoryboard+Extensions.swift",
+      "line": 16,
+      "symbol": "SwinjectStoryboard.setup().main()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/SwinjectStoryboard+Extensions.swift",
+      "line": 31,
+      "symbol": "SwinjectStoryboard.setup().setupData(resolver:navigationCoordinator:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Volumes/DEV/development/CareemAssignment"
+}

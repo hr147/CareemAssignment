@@ -1,0 +1,68 @@
+{
+  "warnings": [
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataClass.swift",
+      "line": null,
+      "symbol": "QueryManagedObject",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataClass.swift",
+      "line": 14,
+      "symbol": "QueryManagedObject",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataProperties.swift",
+      "line": 16,
+      "symbol": "QueryManagedObject.fetchRequest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataProperties.swift",
+      "line": 20,
+      "symbol": "QueryManagedObject.stamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Database/CoreData/ManageObjects/QueryManagedObject+CoreDataProperties.swift",
+      "line": 21,
+      "symbol": "QueryManagedObject.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 11,
+      "symbol": "NetworkError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 30,
+      "symbol": "NetworkError.RequestFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Core/Model/Errors/NetworkError.swift",
+      "line": 32,
+      "symbol": "NetworkError.ServerError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/DEV/development/CareemAssignment/CareemAssignment/Dependencies/SwinjectStoryboard+Extensions.swift",
+      "line": 9,
+      "symbol": "SwinjectStoryboard.setup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Volumes/DEV/development/CareemAssignment"
+}
