@@ -48,6 +48,7 @@
 		BEEDB16D1FE1017200DBD58E /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDB16A1FE1017200DBD58E /* SwinjectStoryboard.framework */; };
 		BEEDB16E1FE1017200DBD58E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDB16B1FE1017200DBD58E /* Swinject.framework */; };
 		BEEDB16F1FE1017200DBD58E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDB16C1FE1017200DBD58E /* Alamofire.framework */; };
+		BEF035161FE8159A001EDCA6 /* MovieTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF035151FE8159A001EDCA6 /* MovieTableViewCellViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		BEEDB16A1FE1017200DBD58E /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		BEEDB16B1FE1017200DBD58E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		BEEDB16C1FE1017200DBD58E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		BEF035151FE8159A001EDCA6 /* MovieTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				BE3F8CB71FE668E300226107 /* MovieViewModel */,
+				BEF035151FE8159A001EDCA6 /* MovieTableViewCellViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3F8CBD1FE6694D00226107 /* MovieViewModelSavedQueryTests.swift in Sources */,
+				BEF035161FE8159A001EDCA6 /* MovieTableViewCellViewModelTests.swift in Sources */,
 				BE3F8CB91FE6691400226107 /* MovieViewModelSearchQueryTests.swift in Sources */,
 				BE3F8CB21FE635BB00226107 /* StubMovieDataStore.swift in Sources */,
 				BE3F8CBB1FE6692E00226107 /* MovieViewModelLoadNextPageTests.swift in Sources */,

@@ -36,7 +36,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-a5-V4x">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_image" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-a5-V4x">
                                                     <rect key="frame" x="15" y="15" width="92" height="138"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="138" id="31F-Z3-b1d"/>
@@ -131,4 +131,7 @@
             <point key="canvasLocation" x="-175.19999999999999" y="165.06746626686657"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="empty_image" width="92" height="108"/>
+    </resources>
 </document>

@@ -19,8 +19,8 @@ struct MovieDataTransferObject:Codable {
     
     let name:String
     let poster:String?
-    let releaseDate:String
-    let description:String
+    let releaseDate:String?
+    let description:String?
     
     func posterFullPath(withImageSize size:MovieImageSize = .w92) -> String? {
         
