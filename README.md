@@ -3,13 +3,36 @@
 
 ## Project Overview
 
-This project is developed using MVVM archtecture and also used flow controllers pettern to manage navigations.
+This project is developed using MVVM archtecture along with flow-controllers pettern to manage navigations.
 
 ### Prerequisites
 
 - xcode 9.2
 - swift 4
 - carthage
+
+### Code Structure & Sequence
+
+- Dependencies injected (Core Data , Alamofire , View Model , Data Stores) in following files
+   
+   ```
+   DependencyRegistry.swift
+   SwinjectStoryboard+Extensions.swift
+   
+   ``` 
+- First Storyboard Setup
+
+   ```
+   Movie.storyboard
+   
+   ```
+- Initial Controller & ViewModel 
+
+ ```
+   MovieSearchViewController.swift
+   MovieSearchViewModel
+   ```
+
 
 ## Libraries Used
 
