@@ -23,6 +23,7 @@ struct CoreDataQueryDataStore: QueryDataStore {
             request.fetchLimit = 1
             request.predicate = NSPredicate(format: "query == %@", query)
             
+            //if it successfull means requested query is already exist & just update with current time stamp
             if let foundQuery:QueryManagedObject = try dataLayer.fetch(withRequest: request).first{
                 
                 foundQuery.stamp = NSDate()

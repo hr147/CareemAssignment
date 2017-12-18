@@ -24,11 +24,7 @@ extension SwinjectStoryboard {
 
                 vc.movieViewModel = viewModel
                 vc.navigationCoordinator = coordinator
-                
-                //NOTE: We don't have access to the constructor for this VC so we are using method injection
-//                vc.configure(with: presenter,
-//            navigationCoordinator: coordinator,
-//                     spyCellMaker: dependencyRegistry.makeSpyCell)
+    
             }
         }
         

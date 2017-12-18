@@ -106,6 +106,16 @@ class MovieSearchViewController: UIViewController {
         
     }
     
+    private func isReachedToLastRow(row:Int) -> Bool {
+        
+        if row == movieViewModel.totalRows()-1 && movieUIActivityIndicatorView.isAnimating == false{
+            
+            return true
+        }
+        
+        return false
+        
+    }
     
 }
 
@@ -129,8 +139,9 @@ extension MovieSearchViewController : UITableViewDataSource {
         cell.configure(with: cellModel)
         
         
-        if indexPath.row == movieViewModel.totalRows()-1 && movieUIActivityIndicatorView.isAnimating == false {
+        if isReachedToLastRow(row: indexPath.row) {
             
+            //ask view model to load next page if available & callback will refresh UI
             try? movieViewModel.loadNextPage()
             
         }
@@ -144,6 +155,7 @@ extension MovieSearchViewController : UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
+        //inform to viewmodel so that it will callback to show saved suggestions if available
         movieViewModel.searchDidBegin()
         
     }
@@ -156,6 +168,7 @@ extension MovieSearchViewController : UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+        //send search query to viewmodel it will validate it & return results or error in callback
         movieViewModel.searchDidPress(withQuery: searchBar.text)
         searchBar.resignFirstResponder()
         navigationCoordinator.hidePopupList()

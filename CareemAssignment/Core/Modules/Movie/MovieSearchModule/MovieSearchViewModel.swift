@@ -56,17 +56,17 @@ class MovieSearchViewModel:MovieSearchViewModeling {
         
     }
     
+    //MARK:- injected Properties
+    fileprivate let movieDataStore:MovieDataStore!
+    fileprivate let queryDataStore:QueryDataStore!
+    
+    //MARK:- Properties
     var refresh: RefreshHandlerAlias?
     var showAlertHandler: ShowAlertHandlerAlias?
     var loadingHandler: LoadingHandlerAlias?
     var showSavedQueriesHandler: ShowSavedQueriesHandlerAlias?
     var searchResultLoadedHandler: SearchResultLoadedHandlerAlias?
-    //MARK:- injected Properties
-    fileprivate let movieDataStore:MovieDataStore!
-    fileprivate let queryDataStore:QueryDataStore!
-    //MARK:- Private properties
     fileprivate var movieDataSource = [MovieDataTransferObject]()
-    
     fileprivate var currentPage = 0
     fileprivate var totalPage = 0
     fileprivate var query:String = ""
@@ -84,7 +84,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     //MARK:- Private methods
     
     
-    func generateRequest(withQuery query:String?) throws -> MovieRequestModel {
+    private func generateRequest(withQuery query:String?) throws -> MovieRequestModel {
         
         guard let _query = query, _query.isEmpty == false else {
             throw MovieSearchViewModelError.invalidQuery
@@ -111,6 +111,7 @@ class MovieSearchViewModel:MovieSearchViewModeling {
     }
     
     //MARK:- MovieSearchViewModeling confirmance
+    
     func loadNextPage() throws {
         
         if canLoadNextPage() == false {
