@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-This project is developed using MVVM archtecture along with flow-controllers pettern to manage navigations.
+This project is developed using MVVM archtecture along with flow-controllers pattern to manage navigations.
 
 ### Prerequisites
 
