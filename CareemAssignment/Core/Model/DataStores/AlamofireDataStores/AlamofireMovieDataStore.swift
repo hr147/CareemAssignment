@@ -43,29 +43,10 @@ struct AlamofireMovieDataStore: MovieDataStore {
     let translation:TranslationLayer!
     
     func search(with request:MovieRequestModel , completion: @escaping ResultHandler<MovieResponseModel>){
-        
-        do {
-            
-            let router:MovieRouter = .search(try translation.json(withModel: request))
-            
-            network.requestObject(router) { (response:DataResponseModel<MovieResponseModel>) in
-                
-                completion(response.result)
-                
-            }
-            
-        }catch{
-            
-            let error:NetworkError = .RequestFailed
-            let result:ResultType<MovieResponseModel> = .failure(error)
-            completion(result)
+        guard let request = try? translation.encode(withModel: request) else { completion(.failure(.RequestFailed)); return  }
+        let router:MovieRouter = .search(request)
+        network.requestObject(router) { (response:DataResponseModel<MovieResponseModel>) in
+            completion(response.result)
         }
-        
     }
-    
-    
-    
-    
-    
-    
 }

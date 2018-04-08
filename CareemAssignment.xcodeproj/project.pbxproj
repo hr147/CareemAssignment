@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE18D2E0200BBA9A0075215E /* RoutersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE18D2DF200BBA9A0075215E /* RoutersProtocol.swift */; };
 		BE2A10EF1FE148DD0097039D /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10EE1FE148DD0097039D /* MovieSearchViewModel.swift */; };
 		BE2A10F41FE14C4D0097039D /* AlamofireMovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F31FE14C4D0097039D /* AlamofireMovieDataStore.swift */; };
 		BE2A10F61FE16A780097039D /* MovieDataTransferObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE18D2DF200BBA9A0075215E /* RoutersProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutersProtocol.swift; sourceTree = "<group>"; };
 		BE2A10EE1FE148DD0097039D /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
 		BE2A10F31FE14C4D0097039D /* AlamofireMovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireMovieDataStore.swift; sourceTree = "<group>"; };
 		BE2A10F51FE16A780097039D /* MovieDataTransferObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataTransferObject.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		BEAD8E111FE1075E00546C7A /* AlamofireNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				BE18D2DF200BBA9A0075215E /* RoutersProtocol.swift */,
 				BEAD8E151FE1075E00546C7A /* Networking.swift */,
 				BEAD8E121FE1075E00546C7A /* AlamofireNetwork.swift */,
 				BEAD8E131FE1075E00546C7A /* AlamofireRouterRequest.swift */,
@@ -620,6 +623,7 @@
 				BEE6A8291FE0FB7E00EA047C /* AppDelegate.swift in Sources */,
 				BE4A91D21FE3FEFE00BF99FA /* CoreDataQueryDataStore.swift in Sources */,
 				BEDDDBC61FE3A96900560342 /* QueryManagedObject+CoreDataClass.swift in Sources */,
+				BE18D2E0200BBA9A0075215E /* RoutersProtocol.swift in Sources */,
 				BE796CA51FE254D300700B4F /* JSONTranslation.swift in Sources */,
 				BE796CAB1FE281CE00700B4F /* MovieTableViewCell.swift in Sources */,
 				BE4C0F391FE462FC00311E19 /* MenuTableViewController.swift in Sources */,

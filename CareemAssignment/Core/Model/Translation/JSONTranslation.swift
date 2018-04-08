@@ -8,21 +8,26 @@
 
 import Alamofire
 
+enum TranslationLayerError:Error {
+    case encodingFailed
+}
+
 protocol TranslationLayer {
-    
-    func json<T:Codable>(withModel model:T) throws -> [String:Any]?
-    
+    func encode<T:Encodable>(withModel model:T) throws -> [String:Any]
+    func decode<T:Decodable>(withData data:Data) throws -> T
 }
 
 class JSONTranslation:TranslationLayer {
-   
     
-    func json<T>(withModel model: T) throws -> [String : Any]? where T : Decodable, T : Encodable {
-        
+    func encode<T>(withModel model: T) throws -> [String : Any] where T : Encodable {
         let encodedData = try JSONEncoder().encode(model)
-        
-        return try JSONSerialization.jsonObject(with: encodedData, options:.allowFragments) as? [String: Any]
+        if let encoded = try JSONSerialization.jsonObject(with: encodedData, options:.allowFragments) as? [String : Any] {
+            return encoded
+        }
+        throw TranslationLayerError.encodingFailed
     }
-
     
+    func decode<T>(withData data: Data) throws -> T where T : Decodable {
+        return try JSONDecoder().decode(T.self, from: data)
+    }
 }

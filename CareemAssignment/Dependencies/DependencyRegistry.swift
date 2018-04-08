@@ -3,17 +3,12 @@ import Swinject
 import SwinjectStoryboard
 
 protocol DependencyRegistry {
-    
     var container: Container { get }
-    
-    
 }
 
 class SwinjectDependency: DependencyRegistry {
-    
-    var container: Container
+    let container: Container
     weak var rootCoordinator: RootCoordinator!
-    
     
     init(container: Container) {
         
@@ -28,59 +23,35 @@ class SwinjectDependency: DependencyRegistry {
     }
     
     func registerDependencies() {
-        
-        
-        container.register(Networking.self) { _ in AlamofireNetwork()  }.inObjectScope(.container)
-        container.register(TranslationLayer.self) { _ in JSONTranslation()  }.inObjectScope(.container)
-        
+        container.register(TranslationLayer.self) { _ in JSONTranslation() }.inObjectScope(.container)
+        container.register(Networking.self) {
+            AlamofireNetwork(translation: $0.resolve(TranslationLayer.self)!)
+            }.inObjectScope(.container)
         if #available(iOS 10.0, *){
-            
             container.register(CareemDataLayer.self) { _ in CoreDataLayer()  }.inObjectScope(.container)
-            
         }else{
             container.register(CareemDataLayer.self) { _ in CoreDataOlderLayer()  }.inObjectScope(.container)
-            
-            
         }
-        
     }
     
-    
     func registerDataStores(){
-        
-        
-        container.register(MovieDataStore.self){ r  in
-            
-            return AlamofireMovieDataStore(network: r.resolve(Networking.self),
-                                           translation: r.resolve(TranslationLayer.self))
-            
-            
+        container.register(MovieDataStore.self){
+            AlamofireMovieDataStore(
+                network: $0.resolve(Networking.self),
+                translation: $0.resolve(TranslationLayer.self))
         }
-        
-        
-        container.register(QueryDataStore.self) { r in
-            
-            return CoreDataQueryDataStore(dataLayer: r.resolve(CareemDataLayer.self))
-            
+        container.register(QueryDataStore.self) {
+            CoreDataQueryDataStore(dataLayer: $0.resolve(CareemDataLayer.self))
         }
-        
     }
     
     func registerViewModels() {
-        
-        
-        container.register(MovieSearchViewModeling.self) { r in
-            
-            let movieDataStore = r.resolve(MovieDataStore.self)!
-            let queryDataStore = r.resolve(QueryDataStore.self)!
-            
-            return MovieSearchViewModel(movieDataStore: movieDataStore, queryDataStore: queryDataStore)
+        container.register(MovieSearchViewModeling.self) {
+            MovieSearchViewModel(
+                movieDataStore: $0.resolve(MovieDataStore.self)!,
+                queryDataStore: $0.resolve(QueryDataStore.self)!)
         }
-        
-        
     }
-    
-    
     func registerViewControllers() {
         
         

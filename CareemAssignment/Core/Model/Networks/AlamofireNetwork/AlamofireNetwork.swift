@@ -11,169 +11,64 @@ import Alamofire
 
 class AlamofireNetwork: Networking {
     
-    let manager = SessionManager.default
+    let translation:TranslationLayer
     
-    //private let queue = DispatchQueue(label: "NailPolishApp.Network.Queue", attributes: [])
+    init(translation:TranslationLayer) {
+        self.translation = translation
+    }
     
+    let manager:SessionManager = {
+        let configuration = URLSessionConfiguration.background(withIdentifier: "com.careemAssigment.app.background")
+        return Alamofire.SessionManager(configuration: configuration)
+    }()
     
-    func requestObject<T:Codable>(_ router: APIRoutering,completionHandler: @escaping DataResponseHandler<T>) {
-        
+    func requestObject<T:Decodable>(_ router: APIRoutering,completionHandler: @escaping DataResponseHandler<T>) {
         let alamoRouter = AlamofireRouterRequest(router)
-        
-    
-        
-        self.manager
+        manager
             .request(alamoRouter)
             .validate()
-            .responseData { response in
-                
+            .responseDecodable(translation: translation){ (response:DataResponse<T>) in
                 print(response.request as Any)  // original URL request
                 print(response.response as Any) // HTTP URL response
                 print(response.data as Any)     // server data
                 print(response.result as Any)   // result of response serialization
-                
-                
                 switch response.result {
-                    
                 case .success(let value):
-                    
-                    do {
-                        let decoder = JSONDecoder()
-                        let model = try decoder.decode(T.self, from: value)
-                        
-                        let response = DataResponseModel<T>(result: .success(model))
-                        
-                        completionHandler(response)
-                        
-                        
-                    } catch{
-                        
-                        let error:NetworkError = .ServerError(message: "Json is not properly parsed")
-                        let response = DataResponseModel<T>(result: .failure(error))
-                        completionHandler(response)
-                    }
-                    
-                case .failure(let error):
-                    print(error)
-                    
-                    let error = NetworkError(error: error as NSError)
-                    let response = DataResponseModel<T>(result: .failure(error))
-                    completionHandler(response)
+                    completionHandler(.init(result: .success(value)))
+                case .failure(let error as NetworkError):
+                    completionHandler(.init(result: .failure(error)))
+                default:break
                 }
         }
-        
-//        self.manager
-//            .request(alamoRouter)
-//            .validate()
-//            .responseJSON(completionHandler: { (alamofireResponse: DataResponse<T>) in
-//
-//                print(alamofireResponse.request as Any)  // original URL request
-//                print(alamofireResponse.response as Any) // HTTP URL response
-//                print(alamofireResponse.data as Any)     // server data
-//                print(alamofireResponse.result)   // result of response serialization
-//
-//                if let _data = alamofireResponse.data, let utf8Text = String(data: _data, encoding: .utf8) {
-//                    debugPrint(utf8Text)
-//
-//                    //let data = Mapper<BaseAPIResponseModel>().map(JSONString: utf8Text)
-//
-//                    //print(String(describing: data))
-//
-//                }
-//
-//
-//
-//                switch alamofireResponse.result {
-//
-//                case .failure(let error):
-//
-//
-////                    let error = NetworkError(error: error as NSError)
-////                    let response = NPResponseModel<T>(result: .failure(error))
-////
-//
-//                    print(error.localizedDescription)
-//                    print("Status code\(String(describing: alamofireResponse.response?.statusCode))")
-//                    print("Error code\((error as NSError).code)")
-//
-//                    //completionHandler(response)
-//
-//                case .success(let value):
-//
-////                    let response = NPResponseModel<T>(result: .success(value))
-////
-////                    completionHandler(response)
-//
-//                }
-//
-//
-//                } as! (DataResponse<Any>) -> Void)
-//
-//
-//
-        
-        
-        
-        
     }
+}
+
+extension DataRequest {
     
-    
-//    func requestArray<T:Mappable>(_ router: APIRoutering,completionHandler: @escaping NPResponseHandler<[T]>) {
-//
-//        let alamoRouter = AlamofireRouterRequest(router)
-//
-//
-//
-//        self.manager
-//            .request(alamoRouter)
-//            .validate()
-//            .responseArray(completionHandler: { (alamofireResponse: DataResponse<[T]>) in
-//
-//                print(alamofireResponse.request as Any)  // original URL request
-//                print(alamofireResponse.response as Any) // HTTP URL response
-//                print(alamofireResponse.data as Any)     // server data
-//                print(alamofireResponse.result)   // result of response serialization
-//
-//                if let _data = alamofireResponse.data, let utf8Text = String(data: _data, encoding: .utf8) {
-//                    debugPrint(utf8Text)
-//
-//                    //let data = Mapper<BaseAPIResponseModel>().map(JSONString: utf8Text)
-//
-//                    //print(String(describing: data))
-//
-//                }
-//
-//
-//
-//                switch alamofireResponse.result {
-//
-//                case .failure(let error):
-//
-//
-//                    let error = NetworkError(error: error as NSError)
-//                    let response = NPResponseModel<[T]>(result: .failure(error))
-//
-//
-//                    print(error.localizedDescription)
-//                    print("Status code\(String(describing: alamofireResponse.response?.statusCode))")
-//                    print("Error code\((error as NSError).code)")
-//
-//                    completionHandler(response)
-//
-//                case .success(let value):
-//
-//                    let response = NPResponseModel<[T]>(result: .success(value))
-//
-//                    completionHandler(response)
-//
-//                }
-//
-//
-//            })
-//
-//
-//    }
-//
-    
-    
+    @discardableResult
+    func responseDecodable<T: Decodable>(
+        translation:TranslationLayer,
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DataResponse<T>) -> Void)
+        -> Self
+    {
+        let responseSerializer = DataResponseSerializer<T> { request, response, data, error in
+            guard error == nil else {
+                return .failure(NetworkError(error: error! as NSError))
+            }
+            let jsonResponseSerializer = DataRequest.dataResponseSerializer()
+            let result = jsonResponseSerializer.serializeResponse(request, response, data, nil)
+            guard case let .success(dataObject) = result else {
+                return .failure(NetworkError(error: result.error! as NSError))
+            }
+            do {
+                return .success(try translation.decode(withData: dataObject))
+            } catch let error {
+                print(error)
+                let error:NetworkError = .ServerError(message: "JSON could not be serialized: \(error)")
+                return .failure(error)
+            }
+        }
+        return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
+    }
 }

@@ -18,8 +18,6 @@ protocol Networking {
 
     func requestObject<T:Codable>(_ router: APIRoutering,completionHandler: @escaping DataResponseHandler<T>)
     
-    //func requestArray<T:Mappable>(_ router: APIRoutering,completionHandler: @escaping NPResponseHandler<[T]>)
-    
 }
 
 
