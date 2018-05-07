@@ -22,10 +22,9 @@ class AlamofireNetwork: Networking {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
-    func requestObject<T:Decodable>(_ router: APIRoutering,completionHandler: @escaping DataResponseHandler<T>) {
-        let alamoRouter = AlamofireRouterRequest(router)
+    func requestObject<T:Decodable>(_ request: RequestConverterProtocol,completionHandler: @escaping DataResponseHandler<T>){
         manager
-            .request(alamoRouter)
+            .request(request)
             .validate()
             .responseDecodable(translation: translation){ (response:DataResponse<T>) in
                 print(response.request as Any)  // original URL request

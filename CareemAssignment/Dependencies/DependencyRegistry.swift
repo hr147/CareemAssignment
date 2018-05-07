@@ -37,8 +37,8 @@ class SwinjectDependency: DependencyRegistry {
     func registerDataStores(){
         container.register(MovieDataStore.self){
             AlamofireMovieDataStore(
-                network: $0.resolve(Networking.self),
-                translation: $0.resolve(TranslationLayer.self))
+                network: $0.resolve(Networking.self)!,
+                translation: $0.resolve(TranslationLayer.self)!)
         }
         container.register(QueryDataStore.self) {
             CoreDataQueryDataStore(dataLayer: $0.resolve(CareemDataLayer.self))

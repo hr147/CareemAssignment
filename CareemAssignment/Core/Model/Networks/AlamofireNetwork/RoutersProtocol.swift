@@ -50,10 +50,9 @@ extension Readable {
     /// ````
     /// Router.User.get(params: "2")
     ///````
-    static func get(params: String) -> RequestConverter {
+    static func get(parameters: Parameters = [:]) -> RequestConverterProtocol {
         let temp = Self.init()
-        let route = "\(temp.route)/\(params)"
-        return RequestConverter(method: .get, route: route)
+        return RequestConverter(method: .get, route: temp.route, parameters: parameters)
     }
 }
 
@@ -66,7 +65,7 @@ extension Creatable {
     /// ````
     /// Router.User.create(parameters: ["username":"initFabian", "github":"https://github.com/initFabian"])
     ///````
-    static func create(parameters: Parameters) -> RequestConverter {
+    static func create(parameters: Parameters) -> RequestConverterProtocol {
         let temp = Self.init()
         let route = "\(temp.route)"
         return RequestConverter(method: .post, route: route, parameters: parameters)
@@ -82,7 +81,7 @@ extension Updatable {
     /// ````
     /// Router.User.update(params: "2", parameters: ["twitterURL":"https://twitter.com/initFabian"])
     ///````
-    static func update(params: String, parameters: Parameters) -> RequestConverter {
+    static func update(params: String, parameters: Parameters) -> RequestConverterProtocol {
         let temp = Self.init()
         let route = "\(temp.route)/\(params)"
         return RequestConverter(method: .put, route: route, parameters: parameters)
@@ -106,7 +105,7 @@ extension Deletable {
 }
 
 /// Protocol that conforms to URLRequestConvertible to all Alamofire integration
-protocol RequestConverterProtocol: URLRequestConvertible {
+protocol RequestConverterProtocol:URLRequestConvertible {
     var method: HTTPMethod {get set}
     var route: String {get set}
     var parameters: Parameters {get set}
@@ -131,7 +130,6 @@ struct RequestConverter: RequestConverterProtocol {
         self.parameters = parameters
     }
 
-
     /// Required method to conform to the `URLRequestConvertible` protocol.
     ///
     /// - Returns: URLRequest object
@@ -142,14 +140,12 @@ struct RequestConverter: RequestConverterProtocol {
         urlRequest.httpMethod = method.rawValue
         return try URLEncoding.default.encode(urlRequest, with: parameters)
     }
+    
 }
-
 
 //Router.swift, Final Implementation file
 struct Router: URLRouter {
     static var basePath: String {
-        return "https://private-85a46-routable.apiary-mock.com/"
+        return APIURLs.baseURL
     }
-    
-    
 }
