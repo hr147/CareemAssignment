@@ -54,7 +54,7 @@ struct CoreDataQueryDataStore: QueryDataStore {
             if queries.isEmpty {
                 generateError()
             }else{
-                let queriesString = queries.flatMap({ $0.query })
+                let queriesString = queries.compactMap({ $0.query })
                 completion(.success(queriesString))
             }
         } catch  {

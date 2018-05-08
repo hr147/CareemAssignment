@@ -7,7 +7,6 @@
 //
 
 struct AlamofireMovieDataStore: MovieDataStore {
-    
     let network:Networking
     let translation:TranslationLayer
     
