@@ -7,8 +7,8 @@ This project is developed using MVVM archtecture along with flow-controllers pat
 
 ### Prerequisites
 
-- xcode 9.2
-- swift 4
+- xcode 9.3
+- swift 4.1
 - carthage
 
 ### Getting Started
