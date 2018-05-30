@@ -40,6 +40,13 @@ class SwinjectDependency: DependencyRegistry {
                 network: $0.resolve(Networking.self)!,
                 translation: $0.resolve(TranslationLayer.self)!)
         }
+        
+        container.register(MovieDataStore_Rx.self){
+            AlamofireMovieDataStore_Rx(
+                network: $0.resolve(Networking.self)!,
+                translation: $0.resolve(TranslationLayer.self)!)
+        }
+        
         container.register(QueryDataStore.self) {
             CoreDataQueryDataStore(dataLayer: $0.resolve(CareemDataLayer.self))
         }
@@ -53,8 +60,9 @@ class SwinjectDependency: DependencyRegistry {
         }
     }
     func registerViewControllers() {
-        
-        
+        container.storyboardInitCompleted(MovieSearchController_Rx.self) { r, vc in
+            vc.movieViewModel = MovieSearchViewModel_Rx(movieDataStore: r.resolve(MovieDataStore_Rx.self)!)
+        }
     }
     
 }

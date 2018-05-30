@@ -8,6 +8,7 @@
 
 
 import Alamofire
+import RxSwift
 
 class AlamofireNetwork: Networking {
     
@@ -22,6 +23,37 @@ class AlamofireNetwork: Networking {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
+    func requestObject<T:Decodable>(_ request: RequestConverterProtocol) -> Observable<ServerResponse<T>>{
+        
+        return Observable.create {[unowned self] observer in
+            
+            let request = self.manager
+                .request(request)
+                .validate()
+                .responseDecodable(translation:self.translation){ (response:DataResponse<T>) in
+                    //Response detail
+                    print(response.request as Any)  // original URL request
+                    print(response.response as Any) // HTTP URL response
+                    print(response.data as Any)     // server data
+                    print(response.result as Any)   // result of response serialization
+                    
+                    if let _data = response.data, let utf8Text = String(data: _data, encoding: .utf8) {
+                        debugPrint(utf8Text)
+                    }
+                    switch response.result {
+                    case .success(let value):
+                        observer.onNext(.init(value: value))
+                        observer.onCompleted()
+                    case .failure(let error):
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
     func requestObject<T:Decodable>(_ request: RequestConverterProtocol,completionHandler: @escaping DataResponseHandler<T>){
         manager
             .request(request)

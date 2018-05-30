@@ -17,6 +17,9 @@ enum ResultType<T> {
 struct DataResponseModel<T> {
 
      let result:ResultType<T>
-    
+
 }
 
+struct ServerResponse<T> {
+    let value:T
+}

@@ -134,6 +134,7 @@ extension MovieSearchViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier,
                                                  for: indexPath) as!MovieTableViewCell
         
+        
         let cellModel = movieViewModel.movieCellViewModel(at: indexPath.row)
         
         cell.configure(with: cellModel)
