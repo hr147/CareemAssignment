@@ -9,14 +9,20 @@
 import RxSwift
 import RxCocoa
 
+struct ListPager {
+    
+}
+
 protocol MovieSearchViewModelingInput {
     var query: Driver<String> { get }
     var searchDidTap: Signal<Void> { get }
+    var loadNextPage: Signal<Void> { get }
 }
 
 struct MovieSearchViewModelInput:MovieSearchViewModelingInput {
     let query: Driver<String>
-    var searchDidTap: Signal<Void>
+    let searchDidTap: Signal<Void>
+    let loadNextPage: Signal<Void>
 }
 
 protocol MovieSearchViewModelingOutput {
@@ -45,6 +51,7 @@ class MovieSearchViewModel_Rx:MovieSearchViewModeling_Rx{
     
     fileprivate let movieDataStore:MovieDataStore_Rx
     fileprivate let movies:BehaviorRelay<[MovieDataTransferObject]> = .init(value: [])
+    fileprivate let movieResponse:BehaviorRelay<MovieResponseModel?> = .init(value: nil)
     
     init(movieDataStore:MovieDataStore_Rx) {
         self.movieDataStore = movieDataStore
@@ -52,19 +59,41 @@ class MovieSearchViewModel_Rx:MovieSearchViewModeling_Rx{
     
     
     func transform(input: MovieSearchViewModelingInput) -> MovieSearchViewModelingOutput {
-        let emptyModel = MovieResponseModel(page: 0, totalResults: 0, totalPages: 0, movies: [])
-        let result = input.searchDidTap.asObservable()
+        
+       let nextPage =  input.loadNextPage.asObservable()
+                        .withLatestFrom(movieResponse)
+                        .filter({
+                            $0!.totalPages > $0!.page
+                        })
+                        .map({ _ in })
+        
+        
+        let search = input.searchDidTap.asObservable()
+                    .do(onNext: {
+                        self.movieResponse.accept(nil)
+                        self.movies.accept([])
+                    })
+        
+        
+        
+        let result = Observable.merge(nextPage,search)
             .withLatestFrom(input.query)
+            .filter({
+                $0.isEmpty == false
+            })
             .map({
-                MovieRequestModel(query: $0, pageNumber: 1)
+                let page = ( self.movieResponse.value?.page ?? 0 ) + 1
+                return MovieRequestModel(query: $0, pageNumber: page)
             })
             .flatMap ({
-                self.movieDataStore.search(with: $0)
-                    .catchErrorJustReturn(emptyModel)
+                return self.movieDataStore.search(with: $0)
+                    .catchErrorJustReturn(MovieResponseModel.empty())
             })
             .do(onNext: { (model:MovieResponseModel) in
                 print(model)
-                self.movies.accept(model.movies)
+                self.movieResponse.accept(model)
+                let movies = self.movies.value + model.movies
+                self.movies.accept(movies)
             })
         
         let refresh = result.map({ _ in () }).asDriver(onErrorJustReturn: ())

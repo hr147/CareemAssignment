@@ -26,3 +26,9 @@ struct MovieResponseModel:Codable {
 //    total_results: 98,
 //    total_pages: 5,
 }
+
+extension MovieResponseModel {
+    static func empty() -> MovieResponseModel {
+        return MovieResponseModel(page: 0, totalResults: 0, totalPages: 0, movies: [])
+    }
+}
