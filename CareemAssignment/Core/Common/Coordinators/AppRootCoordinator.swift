@@ -50,7 +50,7 @@ class AppRootCoordinator: RootCoordinator {
             let searchBarFrame = rootViewController.movieSearchBar.frame
             
             rootViewController.view.addSubview(queryTableView)
-            rootViewController.view.bringSubview(toFront: queryTableView)
+            rootViewController.view.bringSubviewToFront(queryTableView)
             
             queryTableView.frame = CGRect(x: searchBarFrame.origin.x,
                                           y: searchBarFrame.origin.y + searchBarFrame.height,
